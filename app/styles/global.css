@@ -1,6 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 * {
   font-family: "Michroma", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #09080D;
 }
 
 /*# sourceMappingURL=global.css.map */

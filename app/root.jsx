@@ -8,6 +8,7 @@ import {
 } from '@remix-run/react'
 import MainNavigation from './components/MainNavigation'
 import styles from '~/styles/global.css'
+import navStyles from '~/styles/MainNavigation.module.css'
 
 export const meta = () => ({
   charset: 'utf-8',
@@ -22,9 +23,13 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body >
-        <MainNavigation />
-        <Outlet />
+      <body>
+        <header>
+          <MainNavigation />
+        </header>
+        <main>
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
@@ -34,5 +39,8 @@ export default function App() {
 }
 
 export function links() {
-  return [{rel: 'stylesheet', href: styles}]
+  return [
+    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: navStyles },
+  ]
 }
