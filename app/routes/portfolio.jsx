@@ -1,7 +1,9 @@
+import PageWrapper from "~/components/PageWrapper"
+
 export default function PortfolioPage() {
   return (
-    <div>
+    <PageWrapper>
       <h1>portfoliopage</h1>
-    </div>
+    </PageWrapper>
   )
 }

@@ -15,4 +15,63 @@ body {
   width: 100vw;
   box-sizing: border-box;
   background-color: $bg-black;
+  // background-image: url('../../public/big-portrait.png');
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.bg-shape {
+  &-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}
+
+.bg-photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+@media screen and (min-width: 1920px) {
+
+}
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 1120px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
 }

@@ -5,8 +5,8 @@ header {
 }
 header nav {
   width: 60%;
-  max-width: 1000px;
-  margin: 90px 130px 0 0;
+  padding: 90px 130px 0 0;
+  box-sizing: border-box;
 }
 header nav ul {
   display: flex;
@@ -20,6 +20,8 @@ header nav ul li a {
   color: rgba(255, 255, 255, 0.6);
   position: relative;
   transition: all 0.2s ease-in-out;
+  border: none;
+  outline: none;
 }
 header nav ul li a::before {
   content: "";
@@ -49,6 +51,10 @@ header nav ul li a:hover svg path {
 header nav ul li svg path {
   fill: rgba(255, 255, 255, 0.6);
   transition: all 0.2s ease-in-out;
+}
+header nav ul .socials {
+  display: flex;
+  gap: 2rem;
 }
 
 /*# sourceMappingURL=MainNavigation.module.css.map */

@@ -7,8 +7,8 @@ header {
 
   nav {
     width: 60%;
-    max-width: 1000px;
-    margin: 90px 130px 0 0 ;
+    padding: 90px 130px 0 0;
+    box-sizing: border-box;
 
     ul {
       display: flex;
@@ -23,6 +23,8 @@ header {
           color: $white;
           position: relative;
           transition: all 0.2s ease-in-out;
+          border: none;
+          outline: none;
 
           &::before {
             content: '';
@@ -63,7 +65,11 @@ header {
           }
         }
       }
+
+      .socials {
+        display: flex;
+        gap: 2rem;
+      }
     }
   }
 }
-

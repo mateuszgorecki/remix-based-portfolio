@@ -16,8 +16,8 @@ export default function MainNavigation() {
         <li>
           <NavLink to='/contact'>contact</NavLink>
         </li>
-        <li>
-          <Link to='/github'>
+        <li className='socials'>
+        <Link to='/github'>
             <svg
               width='33'
               height='31'
@@ -32,8 +32,6 @@ export default function MainNavigation() {
               />
             </svg>
           </Link>
-        </li>
-        <li>
           <Link to='/facebook'>
             <svg
               width='33'

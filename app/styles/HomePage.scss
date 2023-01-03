@@ -1,0 +1,26 @@
+@import './variables';
+
+.wrapper {
+
+
+  .left {
+    width: 40%;
+  }
+  .right {
+    width: 60%;
+    max-width: 1130px;
+    padding: 50px 250px 0 0;
+    box-sizing: border-box;
+
+    h1 {
+      font-size: 64px;
+      line-height: 150%;
+      margin: 0 0 50px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 160%;
+    }
+  }
+}
