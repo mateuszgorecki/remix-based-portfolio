@@ -1,0 +1,9 @@
+.splide__track {
+  overflow: hidden;
+}
+.splide__list {
+  display: flex;
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=PortolfioSlider.css.map */

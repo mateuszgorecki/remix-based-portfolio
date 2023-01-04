@@ -69,7 +69,7 @@ export default function App() {
           </motion.div>
         </div>
         <img
-          data-isHome={isHome}
+          data-ishome={isHome}
           className='bg-photo'
           src={bgPhoto}
           alt=''

@@ -44,7 +44,7 @@ h1, p {
   filter: blur(0);
   transition: all 0.2s ease-in-out;
 }
-.bg-photo[data-isHome=false] {
+.bg-photo[data-ishome=false] {
   filter: blur(10px);
 }
 

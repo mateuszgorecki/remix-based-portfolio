@@ -48,7 +48,7 @@ h1, p {
   filter: blur(0);
   transition: all 0.2s ease-in-out;;
 
-  &[data-isHome='false'] {
+  &[data-ishome='false'] {
     filter: blur(10px);
   }
 }

@@ -1,0 +1,10 @@
+.splide {
+  &__track {
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+}
