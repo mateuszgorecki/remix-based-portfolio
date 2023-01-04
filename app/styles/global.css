@@ -23,6 +23,10 @@ main {
   justify-content: center;
 }
 
+h1, p {
+  cursor: default;
+}
+
 .bg-shape-wrapper {
   position: absolute;
   top: 50%;

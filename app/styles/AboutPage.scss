@@ -2,9 +2,44 @@
 
 .wrapper {
   .left {
-    // height: 100vh !important;
-    // filter: blur(7px);
-    // backdrop-filter: blur(1px);
-    // position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .right {
+    h1 {
+      font-size: 64px;
+      line-height: 150%;
+    }
+
+    & > p {
+      font-size: 20px;
+      line-height: 160%;
+      margin: 30px 0 60px;
+    }
+    .stats-wrapper {
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          font-size: 20px;
+
+          & > p {
+            width: 630px;
+
+            &:first-child {
+              font-size: 30px;
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
   }
 }

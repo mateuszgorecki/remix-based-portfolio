@@ -1,22 +1,46 @@
-import PageWrapper from "~/components/PageWrapper"
+import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/AboutPage.css'
-
+import photo from '../../public/small-portrait.png'
 export default function AboutPage() {
   return (
     <PageWrapper className='wrapper'>
-      <div className='left'></div>
+      <div className='left'>
+        <img
+          src={photo}
+          alt='jung man with sunglasses and purple-blue light'
+        />
+      </div>
       <div className='right'>
         <h1>JUST MATI</h1>
         <p>
-          A Ośla Łączka Łączka miał w tej zbiorników, z wysoka docierały rakiet,
-          miejscem, z którego całkiem pewien. Można cieniem u stóp, pęcherz
-          razem z fotelem to być olbrzymi zapomniana. Przed chwilą cieni
-          żelaznej konstrukcji, z termosami i jedzeniem, sprzętami, jak nurek,
-          trzecie wrota ładowni. W którym był zamknięty, wszystkie Pirx otworzył
-          usta, boczne, tarcze obu poczynając od płaskich na oczy! Spuścił
-          skromnie mordercę. Zgroza na zewnątrz! Zasypany rumowiskiem!
+          Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni
+          małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na
+          tytoniu do żucia i fotografiach by odłożył, a za resztę musiałby to
+          być się i głową naprzód go też Może kłamie!
         </p>
-        <div className='socials-card-wrapper'></div>
+        <div className='stats-wrapper'>
+          <ul>
+            <li>
+              <p>Class: </p>
+              <p>Frontend Developer</p>
+            </li>
+            <li>
+              <p>Lvl: </p>
+              <p>Junior</p>
+            </li>
+            <li>
+              <p>Exp: </p>
+              <div>
+                <p>&frac12; year in Angon Interactive agency and</p>
+                <p>&frac12; year freelancing</p>
+              </div>
+            </li>
+            <li>
+              <p>Skills: </p>
+              <p>JavaScript, Reactjs, SCSS, HTML, Remixjs, Node.js, Framer-Motion</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </PageWrapper>
   )
