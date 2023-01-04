@@ -1,8 +1,6 @@
 @import './variables';
 
 .wrapper {
-
-
   .left {
     width: 40%;
   }
@@ -21,6 +19,14 @@
     p {
       font-size: 20px;
       line-height: 160%;
+    }
+
+    .socials-card-wrapper {
+      width: fit-content;
+      display: flex;
+      margin: 20px 0 0;
+      // justify-content: space-between;
+
     }
   }
 }

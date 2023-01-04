@@ -1,11 +1,23 @@
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/HomePage.css'
+import { links as socialCardStyles } from '~/components/SocialCard.jsx'
+import { DUMMY_DATA } from '~/components/socials-data'
+import SocialCard from '~/components/SocialCard'
 
 export default function Index() {
+  const cards = DUMMY_DATA.map(card =>(
+    <SocialCard
+      key={card.id}
+      id={card.id}
+      src={card.src}
+      href={card.href}
+      alt={card.alt}
+    />
+  ))
+
   return (
     <PageWrapper className='wrapper'>
-      <div className='left'>
-      </div>
+      <div className='left'></div>
       <div className='right'>
         <h1>Let's start</h1>
         <p>
@@ -17,12 +29,14 @@ export default function Index() {
           usta, boczne, tarcze obu poczynając od płaskich na oczy! Spuścił
           skromnie mordercę. Zgroza na zewnątrz! Zasypany rumowiskiem!
         </p>
-        <div className='socials-card-wrapper'></div>
+        <div className='socials-card-wrapper'>
+          {cards}
+        </div>
       </div>
     </PageWrapper>
   )
 }
 
 export function links() {
-  return [{ rel: 'stylesheet', href: styles }]
+  return [...socialCardStyles(), { rel: 'stylesheet', href: styles }]
 }

@@ -9,22 +9,22 @@ const PageWrapper = (props) => {
       key={useLocation().key}
       initial={{
         opacity: 0,
-        scale: 0.2,
+        // scale: 0.2,
       }}
       animate={{
         opacity: 1,
-        scale: 1,
+        // scale: 1,
       }}
       exit={{
         opacity: 0,
-        scale: 0.2,
+        // scale: 0.2,
         // transition: {
         //   duration: 0.5
         // }
       }}
       transition={{
         duration: 0.5,
-        ease: 'linear',
+        ease: 'easeIn',
         // delay: 0.5
       }}
       className={`page-wrapper ${props.className}`}
