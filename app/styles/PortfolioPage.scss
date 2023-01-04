@@ -1,0 +1,52 @@
+@import './variables';
+
+.wrapper {
+  .left {
+    .website-carousel-wrapper {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 100%;
+    }
+  }
+
+  .right {
+    h1 {
+      font-size: 64px;
+      line-height: 160%;
+    }
+
+    & > p {
+      font-size: 20px;
+      line-height: 160%;
+      margin: 30px 0 50px;
+    }
+    .website-info {
+      &-wrapper {
+        height: fit-content;
+        display: flex;
+        gap: 50px;
+      }
+
+      &-photo {
+        height: 300px;
+        width: 500px !important;
+        background: $almost-white;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+        border-radius: 40px;
+      }
+
+      &-data {
+        width: 350px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      &-description {
+        width: auto;
+      }
+    }
+  }
+}
