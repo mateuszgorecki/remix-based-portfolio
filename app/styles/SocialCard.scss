@@ -2,36 +2,38 @@
 
 :root {
   --card-height: 200px;
-  --card-width: calc(var(--card-height)/ 1.5);
+  --card-width: calc(var(--card-height) / 1.5);
 }
 
-.card-wrapper {
-  background-color: $bg-black;
-  border-radius: 20px;
-  height: var(--card-height);
-  width: var(--card-width);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow:
-  0 0 0 1px $pure-white,
-  0 0 0 10px $bg-black;
-  transition: all .3s ease-in;
+.motion-card-wrapper {
   margin: 0 0 0 -80px;
-  z-index: 10;
 
   &:first-child {
     margin: 0;
   }
 
-  // &:hover {
+  .card-wrapper {
+    background-color: $bg-black;
+    border-radius: 20px;
+    height: var(--card-height);
+    width: var(--card-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 1px $pure-white, 0 0 0 10px $bg-black;
 
-  // }
+    // &:hover {
+    //   img {
+    //     transform: scale(1.1);
 
-  img {
-    width: 50px;
-    height: 50px;
-    filter: drop-shadow(rgba($pure-white, 0.25));
-    transition: all .3s ease-in
+    //   }
+    // }
+
+    img {
+      width: 50px;
+      height: 50px;
+      filter: drop-shadow(rgba($pure-white, 0.25));
+      transition: all 0.2s ease-in-out;
+    }
   }
 }

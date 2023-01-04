@@ -3,16 +3,35 @@ import styles from '~/styles/HomePage.css'
 import { links as socialCardStyles } from '~/components/SocialCard.jsx'
 import { DUMMY_DATA } from '~/components/socials-data'
 import SocialCard from '~/components/SocialCard'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Index() {
-  const cards = DUMMY_DATA.map(card =>(
-    <SocialCard
+  const [isOn, setIsOn] = useState(false)
+
+  const toggleCards = () => setIsOn(!isOn)
+
+  const spring = {
+    type: 'spring',
+    stiffness: 500,
+    damping: 25,
+  }
+
+  const cards = DUMMY_DATA.map((card) => (
+    <motion.div
       key={card.id}
-      id={card.id}
-      src={card.src}
-      href={card.href}
-      alt={card.alt}
-    />
+      layout
+      transition={spring}
+      className='motion-card-wrapper'
+    >
+      <SocialCard
+
+        id={card.id}
+        src={card.src}
+        href={card.href}
+        alt={card.alt}
+      />
+    </motion.div>
   ))
 
   return (
@@ -29,8 +48,16 @@ export default function Index() {
           usta, boczne, tarcze obu poczynając od płaskich na oczy! Spuścił
           skromnie mordercę. Zgroza na zewnątrz! Zasypany rumowiskiem!
         </p>
-        <div className='socials-card-wrapper'>
+        <div
+          className='socials-card-wrapper'
+          data-isOn={isOn}
+          onClick={toggleCards}
+        >
           {cards}
+          <div
+            className='social-cards-overlay'
+            onClick={toggleCards}
+          ></div>
         </div>
       </div>
     </PageWrapper>

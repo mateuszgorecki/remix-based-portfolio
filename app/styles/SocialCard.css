@@ -1,9 +1,15 @@
 :root {
   --card-height: 200px;
-  --card-width: calc(var(--card-height)/ 1.5);
+  --card-width: calc(var(--card-height) / 1.5);
 }
 
-.card-wrapper {
+.motion-card-wrapper {
+  margin: 0 0 0 -80px;
+}
+.motion-card-wrapper:first-child {
+  margin: 0;
+}
+.motion-card-wrapper .card-wrapper {
   background-color: #09080D;
   border-radius: 20px;
   height: var(--card-height);
@@ -12,18 +18,12 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 0 1px #fff, 0 0 0 10px #09080D;
-  transition: all 0.3s ease-in;
-  margin: 0 0 0 -80px;
-  z-index: 10;
 }
-.card-wrapper:first-child {
-  margin: 0;
-}
-.card-wrapper img {
+.motion-card-wrapper .card-wrapper img {
   width: 50px;
   height: 50px;
   filter: drop-shadow(rgba(255, 255, 255, 0.25));
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in-out;
 }
 
 /*# sourceMappingURL=SocialCard.css.map */

@@ -5,7 +5,7 @@ export default function MainNavigation() {
     <nav>
       <ul>
         <li>
-          <NavLink to='/'>main</NavLink>
+          <NavLink className='home-link' to='/'>main</NavLink>
         </li>
         <li>
           <NavLink to='/about'>about</NavLink>
