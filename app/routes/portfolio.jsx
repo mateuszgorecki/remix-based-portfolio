@@ -15,9 +15,9 @@ export default function PortfolioPage() {
     pagination: false,
   }
 
-  let counter = -80
+  // let counter = -80
   const websites = DUMMY_WEBSITES.map((website) => {
-    counter += 80
+    // counter += 80
     return (
       <SplideSlide key={website.id}>
         <WebsiteWrapper
@@ -60,10 +60,10 @@ export default function PortfolioPage() {
               kończąc na tytoniu do żucia i fotografiach by odłożył, a za resztę
               musiałby to być się i głową naprzód go też Może kłamie!
             </p>
-            <p className='website-info-technologies'>
+            <div className='website-info-technologies'>
               <p>Technologies:</p>
               <p>HTML, CSS, JavaScript, PHP</p>
-            </p>
+            </div>
           </div>
         </div>
       </div>

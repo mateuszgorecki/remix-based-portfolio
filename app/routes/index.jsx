@@ -50,7 +50,7 @@ export default function Index() {
         </p>
         <div
           className='socials-card-wrapper'
-          data-isOn={isOn}
+          data-ison={isOn}
           onClick={toggleCards}
         >
           {cards}

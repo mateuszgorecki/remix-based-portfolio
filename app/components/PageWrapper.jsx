@@ -6,26 +6,20 @@ import styles from '~/styles/PageWrapper.css'
 const PageWrapper = (props) => {
   return (
     <motion.div
+    mode='wait'
       key={useLocation().key}
       initial={{
-        opacity: 0,
-        // scale: 0.2,
+        x: '100%',
+        // scale: .5,
       }}
       animate={{
-        opacity: 1,
+        x: 0,
         // scale: 1,
       }}
-      exit={{
-        opacity: 0,
-        // scale: 0.2,
-        // transition: {
-        //   duration: 0.5
-        // }
-      }}
       transition={{
-        duration: 0.5,
-        ease: 'easeIn',
-        // delay: 0.5
+        type: 'spring',
+        stiffness: 300,
+        damping: 25,
       }}
       className={`page-wrapper ${props.className}`}
     >

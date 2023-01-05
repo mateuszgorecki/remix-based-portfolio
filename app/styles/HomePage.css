@@ -23,11 +23,11 @@
   position: relative;
   cursor: pointer;
 }
-.wrapper .right .socials-card-wrapper[data-isOn=true] {
+.wrapper .right .socials-card-wrapper[data-ison=true] {
   justify-content: space-between;
   width: 100%;
 }
-.wrapper .right .socials-card-wrapper[data-isOn=true] .social-cards-overlay {
+.wrapper .right .socials-card-wrapper[data-ison=true] .social-cards-overlay {
   z-index: -1;
 }
 .wrapper .right .socials-card-wrapper .social-cards-overlay {

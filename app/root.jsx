@@ -46,10 +46,10 @@ export default function App() {
         </header>
         <main>
           <AnimatePresence
-            exitBeforeEnter
+            mode='wait'
             initial={false}
           >
-            <Outlet />
+            <Outlet/>
           </AnimatePresence>
         </main>
         <div className='bg-shape-wrapper'>
