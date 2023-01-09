@@ -7,42 +7,20 @@ import WebsiteWrapper, {
 } from '~/components/WebsiteWrapper'
 
 import { AnimatePresence } from 'framer-motion'
-import { useState, useEffect, useCallback } from 'react'
+import { useState } from 'react'
 
 export default function PortfolioPage() {
-  const onTap = useCallback((event, info) => {
+  const onTap = (event, info) => {
     if (event) {
-      // console.log(event.target.getAttribute('data-position'))
-      // console.log(event.path[1])
-      // let firstEl, secondEl
-      setWebsitesList((state) => {
-        const firstEl = state.shift()
-        const secondEl = state.push(firstEl)
-        return [...state]
-      })
-
-      // let secondEl
-      // setWebsitesList((state) => {
-      //   return [state]
-      // })
-      console.log('tap')
+      newWebsites.push(newWebsites.splice(0, 1)[0])
+      setWebsitesList(()=>[newWebsites])
     }
+  }
 
-    // let array = websitesList
-    // console.log('before:', array)
-    // console.log('before: ', websites)
-
-    // setWebsitesList(websites)
-    // const firstEl = array.shift()
-    // const newArray = array.push(firstEl)
-
-    // console.log('after: ', array)
-    // console.log('after: ', websites)
-  }, [])
   const [websitesList, setWebsitesList] = useState(() => {
-    let list
+    let list,
+      counter = 0
     if (DUMMY_WEBSITES.length > 0) {
-      let counter = 0
       list = DUMMY_WEBSITES.map((website) => {
         counter += 1
         return (
@@ -57,63 +35,17 @@ export default function PortfolioPage() {
           />
         )
       })
-    }
+    } else console.log('lol1')
     return list
   })
-
-  // let websites
-  // if (DUMMY_WEBSITES.length > 0) {
-  //   let counter = 0
-  //   let list = websites
-  //     list = DUMMY_WEBSITES.map((website) => {
-  //     counter += 1
-  //     return (
-  //       <WebsiteWrapper
-  //         key={website.id}
-  //         id={website.id}
-  //         title={website.title}
-  //         technologies={website.technologies}
-  //         description={website.description}
-  //         position={counter}
-  //         onTap={onTap}
-  //       />
-  //     )
-  //   })
-  // }
-  // useEffect(() => {
-
-  // },[])
-
-  useEffect(() => {
-    // setWebsitesList((state) => {
-    //   if (DUMMY_WEBSITES.length > 0) {
-    //     let counter = 0
-    //     state = DUMMY_WEBSITES.map((website) => {
-    //       counter += 1
-    //       return (
-    //         <WebsiteWrapper
-    //           key={website.id}
-    //           id={website.id}
-    //           title={website.title}
-    //           technologies={website.technologies}
-    //           description={website.description}
-    //           position={counter}
-    //           onTap={onTap}
-    //         />
-    //       )
-    //     })
-    //   }
-    //   return state
-    // })
-    onTap()
-  }, [onTap])
+  const newWebsites = websitesList.map((website) => website)
 
   return (
     <PageWrapper className='wrapper'>
       <div className='left'>
-        <div className='website-carousel-wrapper'>
+        <ul className='website-carousel-wrapper'>
           <AnimatePresence initial={false}>{websitesList}</AnimatePresence>
-        </div>
+        </ul>
       </div>
       <div className='right'>
         <h1>Portfolio</h1>
