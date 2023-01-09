@@ -9,6 +9,9 @@
 .motion-card-wrapper:first-child {
   margin: 0;
 }
+.motion-card-wrapper:nth-child(1) {
+  z-index: 1;
+}
 .motion-card-wrapper .card-wrapper {
   background-color: #09080d;
   border-radius: 20px;
@@ -18,12 +21,76 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 0 1px #fff, 0 0 0 10px #09080d;
-  border: 0 0 1px #fff;
+  border: 1px solid #fff;
 }
-.motion-card-wrapper .card-wrapper img {
+.motion-card-wrapper img {
   width: 50px;
   height: 50px;
-  filter: drop-shadow(rgba(255, 255, 255, 0.25));
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+  z-index: auto;
+  transition: all 0.2s ease-in-out;
+}
+.motion-card-wrapper:nth-child(2) {
+  z-index: 2;
+}
+.motion-card-wrapper .card-wrapper {
+  background-color: #09080d;
+  border-radius: 20px;
+  height: var(--card-height);
+  width: var(--card-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 10px #09080d;
+  border: 1px solid #fff;
+}
+.motion-card-wrapper img {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+  z-index: auto;
+  transition: all 0.2s ease-in-out;
+}
+.motion-card-wrapper:nth-child(3) {
+  z-index: 3;
+}
+.motion-card-wrapper .card-wrapper {
+  background-color: #09080d;
+  border-radius: 20px;
+  height: var(--card-height);
+  width: var(--card-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 10px #09080d;
+  border: 1px solid #fff;
+}
+.motion-card-wrapper img {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+  z-index: auto;
+  transition: all 0.2s ease-in-out;
+}
+.motion-card-wrapper:nth-child(4) {
+  z-index: 4;
+}
+.motion-card-wrapper .card-wrapper {
+  background-color: #09080d;
+  border-radius: 20px;
+  height: var(--card-height);
+  width: var(--card-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 10px #09080d;
+  border: 1px solid #fff;
+}
+.motion-card-wrapper img {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+  z-index: auto;
   transition: all 0.2s ease-in-out;
 }
 

@@ -12,6 +12,11 @@
     margin: 0;
   }
 
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      z-index: #{$i};
+    }
+
   .card-wrapper {
     background-color: $bg-black;
     border-radius: 20px;
@@ -21,12 +26,15 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 0 1px $pure-white, 0 0 0 10px $bg-black;
-    border: 0 0  1px $pure-white;
+    border: 1px solid $pure-white;
+    }
 
     img {
       width: 50px;
       height: 50px;
-      filter: drop-shadow(rgba($pure-white, 0.25));
+      // box-shadow: 0 0 4px rgba($pure-white, 0.6);
+      filter: drop-shadow(0 0 4px rgba($pure-white, 0.6));
+      z-index: auto;
       transition: all 0.2s ease-in-out;
     }
   }
