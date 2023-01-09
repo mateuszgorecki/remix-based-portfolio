@@ -31,5 +31,8 @@
 .wrapper .right .website-info-description {
   width: auto;
 }
+.wrapper .right .website-info-technologies p {
+  width: auto;
+}
 
 /*# sourceMappingURL=PortfolioPage.css.map */

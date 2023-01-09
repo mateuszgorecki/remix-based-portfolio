@@ -6,7 +6,7 @@ import WebsiteWrapper, {
   links as WebsiteWrapperStyles,
 } from '~/components/WebsiteWrapper'
 
-import { AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export default function PortfolioPage() {
@@ -75,12 +75,53 @@ export default function PortfolioPage() {
         <div className='website-info-wrapper'>
           <div className='website-info-photo'></div>
           <div className='website-info-data'>
-            <p className='website-info-description'>
-              {websiteInfo.description}
-            </p>
+            <AnimatePresence
+              mode='wait'
+            >
+              <motion.p
+                className='website-info-description'
+                key={Math.random()}
+                start={{
+                  opacity: 0.5,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                exit={{
+                  opacity: 0.5,
+                }}
+                transition={{
+                  ease: 'easeInOut',
+                  duration: .3,
+                }}
+              >
+                {websiteInfo.description}
+              </motion.p>
+            </AnimatePresence>
             <div className='website-info-technologies'>
               <p>Technologies:</p>
-              {websiteInfo.technologies}
+              <AnimatePresence
+                mode='wait'
+              >
+                <motion.p
+                  key={Math.random()}
+                  start={{
+                    opacity: 0.5,
+                  }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  exit={{
+                    opacity: 0.5,
+                  }}
+                  transition={{
+                    ease: 'easeInOut',
+                    duration: .3,
+                  }}
+                >
+                  {websiteInfo.technologies}
+                </motion.p>
+              </AnimatePresence>
             </div>
           </div>
         </div>
