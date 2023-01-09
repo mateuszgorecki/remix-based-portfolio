@@ -7,13 +7,24 @@ import WebsiteWrapper, {
 } from '~/components/WebsiteWrapper'
 
 import { AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function PortfolioPage() {
+  const initialState = {
+    description: '',
+    technologies: '',
+  }
+
+  const [websiteInfo, setWebsiteInfo] = useState(initialState)
+
   const onTap = (event, info) => {
     if (event) {
       newWebsites.push(newWebsites.splice(0, 1)[0])
-      setWebsitesList(()=>[newWebsites])
+      setWebsiteInfo({
+        description: newWebsites[0].props.description,
+        technologies: newWebsites[0].props.technologies,
+      })
+      setWebsitesList(() => [newWebsites])
     }
   }
 
@@ -35,10 +46,16 @@ export default function PortfolioPage() {
           />
         )
       })
-    } else console.log('lol1')
+    }
     return list
   })
   const newWebsites = websitesList.map((website) => website)
+  useEffect(() => {
+    setWebsiteInfo({
+      description: websitesList[0].props.description,
+      technologies: websitesList[0].props.technologies,
+    })
+  }, [])
 
   return (
     <PageWrapper className='wrapper'>
@@ -59,14 +76,11 @@ export default function PortfolioPage() {
           <div className='website-info-photo'></div>
           <div className='website-info-data'>
             <p className='website-info-description'>
-              Przypomniał sobie, że gdyby butami? Zaszła mówił i może się
-              dźwigni małego pilotażu, zbiorników, z wysoka docierały tu a
-              kończąc na tytoniu do żucia i fotografiach by odłożył, a za resztę
-              musiałby to być się i głową naprzód go też Może kłamie!
+              {websiteInfo.description}
             </p>
             <div className='website-info-technologies'>
               <p>Technologies:</p>
-              <p>HTML, CSS, JavaScript, PHP</p>
+              {websiteInfo.technologies}
             </div>
           </div>
         </div>
