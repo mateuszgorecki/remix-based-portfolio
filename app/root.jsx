@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
   useLocation,
 } from '@remix-run/react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -25,6 +26,25 @@ export const meta = () => ({
   viewport: 'width=device-width,initial-scale=1',
 })
 
+// export function CatchBoundary() {
+//   const caught = useCatch();
+//   return (
+//     <html>
+//       <head>
+//         <title>Oops!</title>
+//         <Meta />
+//         <Links />
+//       </head>
+//       <body>
+//         <h1>
+//           {caught.status} {caught.statusText}
+//         </h1>
+//         <Scripts />
+//       </body>
+//     </html>
+//   );
+// }
+
 export default function App() {
   const [isHome, setIsHome] = useState(true)
   const location = useLocation()
@@ -33,6 +53,7 @@ export default function App() {
     if (location.pathname === '/') setIsHome(true)
     else setIsHome(false)
   }, [location])
+
 
   return (
     <html lang='en'>
@@ -52,6 +73,10 @@ export default function App() {
             <Outlet/>
           </AnimatePresence>
         </main>
+        <footer>
+          <p>Me via </p>
+          <a href="http://pomelovisual.pl/" target='_blank'>Pomelo Visual</a>
+        </footer>
         <div className='bg-shape-wrapper'>
           <motion.div
             animate={{ rotate: 360 }}

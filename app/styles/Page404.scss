@@ -1,0 +1,11 @@
+@import './variables';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 50px;
+  }
+}

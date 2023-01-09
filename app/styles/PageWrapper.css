@@ -5,12 +5,23 @@
 }
 .page-wrapper .left {
   width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 .page-wrapper .right {
   width: 60%;
   max-width: 1130px;
   padding: 50px 250px 0 0;
   box-sizing: border-box;
+}
+.page-wrapper .right h1 {
+  font-size: 64px;
+  line-height: 150%;
+}
+.page-wrapper .right > p {
+  font-size: 20px;
+  line-height: 160%;
 }
 
 /*# sourceMappingURL=PageWrapper.css.map */

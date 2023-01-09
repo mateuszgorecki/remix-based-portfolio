@@ -8,13 +8,7 @@
   box-sizing: border-box;
 }
 .wrapper .right h1 {
-  font-size: 64px;
-  line-height: 150%;
   margin: 0 0 50px;
-}
-.wrapper .right p {
-  font-size: 20px;
-  line-height: 160%;
 }
 .wrapper .right .socials-card-wrapper {
   width: fit-content;

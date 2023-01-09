@@ -10,14 +10,14 @@
   margin: 0;
 }
 .motion-card-wrapper .card-wrapper {
-  background-color: #09080D;
+  background-color: #09080d;
   border-radius: 20px;
   height: var(--card-height);
   width: var(--card-width);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 10px #09080D;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 10px #09080d;
   border: 0 0 1px #fff;
 }
 .motion-card-wrapper .card-wrapper img {

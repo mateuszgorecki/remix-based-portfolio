@@ -5,42 +5,114 @@ import { DUMMY_WEBSITES } from '~/components/websites-data'
 import WebsiteWrapper, {
   links as WebsiteWrapperStyles,
 } from '~/components/WebsiteWrapper'
-import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
+
+import { AnimatePresence } from 'framer-motion'
+import { useState, useEffect, useCallback } from 'react'
 
 export default function PortfolioPage() {
-  const options = {
-    type: 'loop',
-    width: 400,
-    gap: '1rem',
-    pagination: false,
-  }
+  const onTap = useCallback((event, info) => {
+    if (event) {
+      // console.log(event.target.getAttribute('data-position'))
+      // console.log(event.path[1])
+      // let firstEl, secondEl
+      setWebsitesList((state) => {
+        const firstEl = state.shift()
+        const secondEl = state.push(firstEl)
+        return [...state]
+      })
 
-  // let counter = -80
-  const websites = DUMMY_WEBSITES.map((website) => {
-    // counter += 80
-    return (
-      <SplideSlide key={website.id}>
-        <WebsiteWrapper
-          id={website.id}
-          title={website.title}
-          technologies={website.technologies}
-          description={website.description}
-          // style={{ transform: `translate(${counter}px, ${counter}px)` }}
-        />
-      </SplideSlide>
-    )
+      // let secondEl
+      // setWebsitesList((state) => {
+      //   return [state]
+      // })
+      console.log('tap')
+    }
+
+    // let array = websitesList
+    // console.log('before:', array)
+    // console.log('before: ', websites)
+
+    // setWebsitesList(websites)
+    // const firstEl = array.shift()
+    // const newArray = array.push(firstEl)
+
+    // console.log('after: ', array)
+    // console.log('after: ', websites)
+  }, [])
+  const [websitesList, setWebsitesList] = useState(() => {
+    let list
+    if (DUMMY_WEBSITES.length > 0) {
+      let counter = 0
+      list = DUMMY_WEBSITES.map((website) => {
+        counter += 1
+        return (
+          <WebsiteWrapper
+            key={website.id}
+            id={website.id}
+            title={website.title}
+            technologies={website.technologies}
+            description={website.description}
+            position={counter}
+            onTap={onTap}
+          />
+        )
+      })
+    }
+    return list
   })
+
+  // let websites
+  // if (DUMMY_WEBSITES.length > 0) {
+  //   let counter = 0
+  //   let list = websites
+  //     list = DUMMY_WEBSITES.map((website) => {
+  //     counter += 1
+  //     return (
+  //       <WebsiteWrapper
+  //         key={website.id}
+  //         id={website.id}
+  //         title={website.title}
+  //         technologies={website.technologies}
+  //         description={website.description}
+  //         position={counter}
+  //         onTap={onTap}
+  //       />
+  //     )
+  //   })
+  // }
+  // useEffect(() => {
+
+  // },[])
+
+  useEffect(() => {
+    // setWebsitesList((state) => {
+    //   if (DUMMY_WEBSITES.length > 0) {
+    //     let counter = 0
+    //     state = DUMMY_WEBSITES.map((website) => {
+    //       counter += 1
+    //       return (
+    //         <WebsiteWrapper
+    //           key={website.id}
+    //           id={website.id}
+    //           title={website.title}
+    //           technologies={website.technologies}
+    //           description={website.description}
+    //           position={counter}
+    //           onTap={onTap}
+    //         />
+    //       )
+    //     })
+    //   }
+    //   return state
+    // })
+    onTap()
+  }, [onTap])
 
   return (
     <PageWrapper className='wrapper'>
       <div className='left'>
         <div className='website-carousel-wrapper'>
-          <Splide
-            options={options}
-            hasTrack={false}
-          >
-            <SplideTrack>{websites}</SplideTrack>
-          </Splide>
+          <AnimatePresence initial={false}>{websitesList}</AnimatePresence>
         </div>
       </div>
       <div className='right'>

@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper p {
+  font-size: 50px;
+}
+
+/*# sourceMappingURL=Page404.css.map */

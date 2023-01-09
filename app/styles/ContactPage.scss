@@ -1,0 +1,50 @@
+@import './variables';
+
+.wrapper {
+  .right {
+    .contact-info-wrapper {
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        input,
+        textarea,
+        button {
+          border: 1px solid $pure-white;
+          border-radius: 20px;
+          outline: none;
+          color: $pure-white;
+          font-size: 24px;
+          line-height: 29px;
+          background-color: $bg-black;
+          padding: 22px;
+
+          &::placeholder {
+            color: $white;
+            text-transform: uppercase;
+          }
+        }
+
+        input {
+          width: 600px;
+        }
+
+        textarea {
+          resize: none;
+          height: 150px;
+          width: auto;
+        }
+
+        button {
+          font-size: 45px;
+          line-height: 100%;
+          padding: 25px 20px;
+          width: fit-content;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}

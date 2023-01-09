@@ -9,17 +9,15 @@ const PageWrapper = (props) => {
     mode='wait'
       key={useLocation().key}
       initial={{
-        x: '100%',
-        // scale: .5,
+        scale: .5,
       }}
       animate={{
-        x: 0,
-        // scale: 1,
+        scale: 1,
       }}
       transition={{
         type: 'spring',
-        stiffness: 300,
-        damping: 25,
+        stiffness: 400,
+        damping: 20,
       }}
       className={`page-wrapper ${props.className}`}
     >

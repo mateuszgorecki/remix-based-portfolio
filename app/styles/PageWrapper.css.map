@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["PageWrapper.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA","file":"PageWrapper.css"}
+{"version":3,"sourceRoot":"","sources":["PageWrapper.scss","_variables.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAEA;ECbF;EACA;;ADgBE;ECZF;EACA","file":"PageWrapper.css"}

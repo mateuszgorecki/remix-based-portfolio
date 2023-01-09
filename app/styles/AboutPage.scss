@@ -1,21 +1,9 @@
 @import './variables';
 
 .wrapper {
-  .left {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
 
   .right {
-    h1 {
-      font-size: 64px;
-      line-height: 150%;
-    }
-
     & > p {
-      font-size: 20px;
-      line-height: 160%;
       margin: 30px 0 60px;
     }
     .stats-wrapper {
