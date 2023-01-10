@@ -1,19 +1,28 @@
+.wrapper .right > p {
+  margin: 1rem 0 2rem;
+}
 .wrapper .right .contact-info-wrapper form {
   display: flex;
-  flex-direction: column;
+  height: 350px;
   gap: 1rem;
+}
+.wrapper .right .contact-info-wrapper form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 .wrapper .right .contact-info-wrapper form input,
 .wrapper .right .contact-info-wrapper form textarea,
 .wrapper .right .contact-info-wrapper form button {
   border: 1px solid #fff;
-  border-radius: 20px;
+  border-radius: 15px;
   outline: none;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 29px;
   background-color: #09080d;
-  padding: 22px;
+  padding: 15px;
 }
 .wrapper .right .contact-info-wrapper form input::placeholder,
 .wrapper .right .contact-info-wrapper form textarea::placeholder,
@@ -22,19 +31,26 @@
   text-transform: uppercase;
 }
 .wrapper .right .contact-info-wrapper form input {
-  width: 600px;
+  width: auto;
 }
 .wrapper .right .contact-info-wrapper form textarea {
   resize: none;
   height: 150px;
   width: auto;
 }
+.wrapper .right .contact-info-wrapper form input, .wrapper .right .contact-info-wrapper form textarea {
+  transition: all 0.2s ease-in-out;
+}
+.wrapper .right .contact-info-wrapper form input:focus, .wrapper .right .contact-info-wrapper form textarea:focus {
+  border: 1px solid #AA00FF;
+}
 .wrapper .right .contact-info-wrapper form button {
-  font-size: 45px;
+  font-size: 30px;
   line-height: 100%;
-  padding: 25px 20px;
-  width: fit-content;
-  align-self: flex-end;
+  padding: 20px;
+  width: 160px;
+  height: 350px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=ContactPage.css.map */

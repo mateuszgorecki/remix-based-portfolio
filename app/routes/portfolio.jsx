@@ -61,7 +61,12 @@ export default function PortfolioPage() {
     <PageWrapper className='wrapper'>
       <div className='left'>
         <ul className='website-carousel-wrapper'>
-          <AnimatePresence initial={false}>{websitesList}</AnimatePresence>
+          <AnimatePresence
+            mode='wait'
+            initial={false}
+          >
+            {websitesList}
+          </AnimatePresence>
         </ul>
       </div>
       <div className='right'>
@@ -73,11 +78,11 @@ export default function PortfolioPage() {
           być się i głową naprzód go też Może kłamie!
         </p>
         <div className='website-info-wrapper'>
-          <div className='website-info-photo'></div>
+          <div
+            className='website-info-photo'
+          ></div>
           <div className='website-info-data'>
-            <AnimatePresence
-              mode='wait'
-            >
+            <AnimatePresence mode='wait'>
               <motion.p
                 className='website-info-description'
                 key={Math.random()}
@@ -92,7 +97,7 @@ export default function PortfolioPage() {
                 }}
                 transition={{
                   ease: 'easeInOut',
-                  duration: .3,
+                  duration: 0.3,
                 }}
               >
                 {websiteInfo.description}
@@ -100,9 +105,7 @@ export default function PortfolioPage() {
             </AnimatePresence>
             <div className='website-info-technologies'>
               <p>Technologies:</p>
-              <AnimatePresence
-                mode='wait'
-              >
+              <AnimatePresence mode='wait'>
                 <motion.p
                   key={Math.random()}
                   start={{
@@ -116,7 +119,7 @@ export default function PortfolioPage() {
                   }}
                   transition={{
                     ease: 'easeInOut',
-                    duration: .3,
+                    duration: 0.3,
                   }}
                 >
                   {websiteInfo.technologies}

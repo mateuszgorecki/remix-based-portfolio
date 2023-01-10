@@ -11,7 +11,7 @@ export default function AboutPage() {
         />
       </div>
       <div className='right'>
-        <h1>JUST MATI</h1>
+        <h1>About me</h1>
         <p>
           Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni
           małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na

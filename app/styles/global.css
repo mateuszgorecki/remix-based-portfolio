@@ -32,6 +32,14 @@ footer {
   gap: 0.5rem;
   align-items: center;
 }
+footer a {
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer a:hover {
+  color: #AA00FF;
+}
 
 h1, p {
   cursor: default;

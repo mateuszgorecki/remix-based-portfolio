@@ -2,24 +2,35 @@
 
 .wrapper {
   .right {
-    .contact-info-wrapper {
 
+    & > p {
+      margin: 1rem 0 2rem;
+    }
+
+    .contact-info-wrapper {
       form {
         display: flex;
-        flex-direction: column;
+        height: 350px;
         gap: 1rem;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+        }
 
         input,
         textarea,
         button {
           border: 1px solid $pure-white;
-          border-radius: 20px;
+          border-radius: 15px;
           outline: none;
           color: $pure-white;
-          font-size: 24px;
+          font-size: 20px;
           line-height: 29px;
           background-color: $bg-black;
-          padding: 22px;
+          padding: 15px;
 
           &::placeholder {
             color: $white;
@@ -28,7 +39,7 @@
         }
 
         input {
-          width: 600px;
+          width:auto;
         }
 
         textarea {
@@ -37,12 +48,21 @@
           width: auto;
         }
 
+        input, textarea {
+          transition: all .2s ease-in-out;
+
+          &:focus {
+            border: 1px solid $highlight1;
+          }
+        }
+
         button {
-          font-size: 45px;
+          font-size: 30px;
           line-height: 100%;
-          padding: 25px 20px;
-          width: fit-content;
-          align-self: flex-end;
+          padding: 20px;
+          width: 160px;
+          height: 350px;
+          cursor: pointer;
         }
       }
     }
