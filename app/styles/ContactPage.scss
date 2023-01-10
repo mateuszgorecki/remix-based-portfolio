@@ -2,7 +2,6 @@
 
 .wrapper {
   .right {
-
     & > p {
       margin: 1rem 0 2rem;
     }
@@ -29,7 +28,7 @@
           color: $pure-white;
           font-size: 20px;
           line-height: 29px;
-          background-color: $bg-black;
+          background-color: transparent;
           padding: 15px;
 
           &::placeholder {
@@ -39,7 +38,7 @@
         }
 
         input {
-          width:auto;
+          width: auto;
         }
 
         textarea {
@@ -48,11 +47,13 @@
           width: auto;
         }
 
-        input, textarea {
-          transition: all .2s ease-in-out;
+        input,
+        textarea {
+          transition: all 0.2s ease-in-out;
+          // background-color: transparent;
 
           &:focus {
-            border: 1px solid $highlight1;
+            border: 1px solid $highlight;
           }
         }
 
@@ -61,10 +62,58 @@
           line-height: 100%;
           padding: 20px;
           width: 160px;
-          height: 350px;
+          height: 100%;
           cursor: pointer;
+          // background-color: $bg-black;
         }
       }
     }
   }
+}
+
+@media screen and (min-width: 1920px) {
+  .wrapper {
+    .right {
+      & > p {
+        margin: 0 0 3rem;
+      }
+
+      .contact-info-wrapper {
+        form {
+          height: 500px;
+
+          input,
+          textarea {
+            padding: 30px;
+          }
+
+          textarea {
+            height: 200px;
+          }
+
+          button {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1120px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
 }

@@ -1,3 +1,13 @@
+:root {
+  --website-height: 500px;
+  --website-width: calc(var(--website-height) / 1.5);
+}
+@media screen and (min-width: 1920px) {
+  :root {
+    --website-height: 600px;
+  }
+}
+
 .wrapper .right > p {
   margin: 1rem 0 2rem;
 }
@@ -21,7 +31,7 @@
   color: #fff;
   font-size: 20px;
   line-height: 29px;
-  background-color: #09080d;
+  background-color: transparent;
   padding: 15px;
 }
 .wrapper .right .contact-info-wrapper form input::placeholder,
@@ -38,10 +48,12 @@
   height: 150px;
   width: auto;
 }
-.wrapper .right .contact-info-wrapper form input, .wrapper .right .contact-info-wrapper form textarea {
+.wrapper .right .contact-info-wrapper form input,
+.wrapper .right .contact-info-wrapper form textarea {
   transition: all 0.2s ease-in-out;
 }
-.wrapper .right .contact-info-wrapper form input:focus, .wrapper .right .contact-info-wrapper form textarea:focus {
+.wrapper .right .contact-info-wrapper form input:focus,
+.wrapper .right .contact-info-wrapper form textarea:focus {
   border: 1px solid #AA00FF;
 }
 .wrapper .right .contact-info-wrapper form button {
@@ -49,8 +61,27 @@
   line-height: 100%;
   padding: 20px;
   width: 160px;
-  height: 350px;
+  height: 100%;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1920px) {
+  .wrapper .right > p {
+    margin: 0 0 3rem;
+  }
+  .wrapper .right .contact-info-wrapper form {
+    height: 500px;
+  }
+  .wrapper .right .contact-info-wrapper form input,
+  .wrapper .right .contact-info-wrapper form textarea {
+    padding: 30px;
+  }
+  .wrapper .right .contact-info-wrapper form textarea {
+    height: 200px;
+  }
+  .wrapper .right .contact-info-wrapper form button {
+    width: 200px;
+  }
 }
 
 /*# sourceMappingURL=ContactPage.css.map */

@@ -1,7 +1,6 @@
 @import './variables';
 
 .wrapper {
-
   .right {
     & > p {
       margin: 30px 0 60px;
@@ -30,4 +29,48 @@
       }
     }
   }
+}
+
+@media screen and (min-width: 1920px) {
+  .wrapper {
+    .right {
+
+      & > p {
+        margin: 0 0 3vw;
+      }
+      .stats-wrapper {
+        ul {
+          gap: 2rem;
+
+          li {
+            font-size: 24px;
+
+            & > p {
+              &:first-child {
+                font-size: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1120px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
 }

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["Page404.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;;AAEA;EACE","file":"Page404.css"}
+{"version":3,"sourceRoot":"","sources":["_variables.scss","Page404.scss"],"names":[],"mappings":"AAOA;EACE;EACA;;AAGA;EALF;IAMI;;;;ACXJ;EACE;EACA;EACA;;AAEA;EACE","file":"Page404.css"}

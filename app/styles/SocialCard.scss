@@ -3,10 +3,15 @@
 :root {
   --card-height: 200px;
   --card-width: calc(var(--card-height) / 1.5);
+  --card-margin: calc(var(--card-width) / 2);
+
+  @media screen and (min-width: 1920px) {
+    --card-height: 300px;
+  }
 }
 
 .motion-card-wrapper {
-  margin: 0 0 0 -80px;
+  margin: 0 0 0 calc(var(--card-margin) - (var(--card-margin) * 2));
 
   &:first-child {
     margin: 0;
@@ -30,12 +35,49 @@
     }
 
     img {
-      width: 50px;
-      height: 50px;
-      // box-shadow: 0 0 4px rgba($pure-white, 0.6);
       filter: drop-shadow(0 0 4px rgba($pure-white, 0.6));
       z-index: auto;
       transition: all 0.2s ease-in-out;
+      width: 3rem;
+      height: 3rem;
     }
   }
+}
+
+@media screen and (min-width: 1920px) {
+  .motion-card-wrapper {
+    .card-wrapper {
+      box-shadow: 0 0 0 1px $pure-white, 0 0 0 15px $bg-black;
+      }
+
+      img {
+        width: 5rem;
+        height: 5rem;
+        filter: drop-shadow(0 0 5px rgba($pure-white, 0.6));
+      }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 1120px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
 }

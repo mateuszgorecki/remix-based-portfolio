@@ -31,7 +31,7 @@ export default function AboutPage() {
             <li>
               <p>Exp: </p>
               <div>
-                <p>&frac12; year in Angon Interactive agency and</p>
+                <p>&frac12; year in Angon Interactive agency,</p>
                 <p>&frac12; year freelancing</p>
               </div>
             </li>

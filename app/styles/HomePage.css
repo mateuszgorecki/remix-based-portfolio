@@ -1,12 +1,13 @@
-.wrapper .left {
-  width: 40%;
+:root {
+  --website-height: 500px;
+  --website-width: calc(var(--website-height) / 1.5);
 }
-.wrapper .right {
-  width: 60%;
-  max-width: 1130px;
-  padding: 50px 250px 0 0;
-  box-sizing: border-box;
+@media screen and (min-width: 1920px) {
+  :root {
+    --website-height: 600px;
+  }
 }
+
 .wrapper .right h1 {
   margin: 0 0 50px;
 }
@@ -33,6 +34,12 @@
   height: 100%;
   margin: 0;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1920px) {
+  .wrapper .right .socials-card-wrapper {
+    margin: 3vw 0 0;
+  }
 }
 
 /*# sourceMappingURL=HomePage.css.map */

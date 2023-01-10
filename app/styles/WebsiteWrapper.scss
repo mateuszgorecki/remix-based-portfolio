@@ -1,9 +1,11 @@
 @import './variables';
 
+
+
 .website-wrapper {
   position: absolute;
-  width: 340px;
-  height: 500px;
+  width: var(--website-width);
+  height: var(--website-height);
   background: $almost-white;
   box-shadow: 0px 0px 25px rgba($black, 0.5);
   border-radius: 40px;
@@ -40,4 +42,32 @@
   p {
     color: $black;
   }
+}
+
+@media screen and (min-width: 1920px) {
+
+}
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 1120px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
 }

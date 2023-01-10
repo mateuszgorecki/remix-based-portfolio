@@ -3,17 +3,81 @@ $almost-white : #d9d9d9;
 $white        : rgba($pure-white, 0.6);
 $bg-black     : #09080d;
 $black        : #000;
-$highlight1   : #AA00FF;
-$highlight2   : #651FFF;
-$highlight3   : #6200EA;
+$highlight   : #AA00FF;
+
+:root {
+  --website-height: 500px;
+  --website-width: calc(var(--website-height) / 1.5);
+  // --card-margin: calc(var(--card-width) / 2);
+
+  @media screen and (min-width: 1920px) {
+    --website-height: 600px;
+  }
+}
 
 @mixin big-text {
   font-size: 58px;
   line-height: 150%;
   text-transform: uppercase;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 60px;
+  }
+
+  @media screen and (max-width: 1440px) {
+
+  }
+
+  @media screen and (max-width: 1280px) {
+
+  }
+
+  @media screen and (max-width: 1120px) {
+
+  }
+
+  @media screen and (max-width: 992px) {
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+  }
+
+  @media screen and (max-width: 576px) {
+
+  }
 }
 
 @mixin small-text {
   font-size: 20px;
   line-height: 160%;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 1440px) {
+
+  }
+
+  @media screen and (max-width: 1280px) {
+
+  }
+
+  @media screen and (max-width: 1120px) {
+
+  }
+
+  @media screen and (max-width: 992px) {
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+  }
+
+  @media screen and (max-width: 576px) {
+
+  }
 }

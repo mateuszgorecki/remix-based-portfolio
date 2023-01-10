@@ -1,6 +1,5 @@
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/PortfolioPage.css'
-import sliderStyles from '~/styles/PortolfioSlider.css'
 import { DUMMY_WEBSITES } from '~/components/websites-data'
 import WebsiteWrapper, {
   links as WebsiteWrapperStyles,
@@ -137,6 +136,5 @@ export function links() {
   return [
     ...WebsiteWrapperStyles(),
     { rel: 'stylesheet', href: styles },
-    { rel: 'stylesheet', href: sliderStyles },
   ]
 }
