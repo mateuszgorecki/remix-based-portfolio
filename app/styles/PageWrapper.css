@@ -2,7 +2,7 @@
   --website-height: 500px;
   --website-width: calc(var(--website-height) / 1.5);
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1921px) {
   :root {
     --website-height: 600px;
   }
@@ -34,7 +34,7 @@
   line-height: 150%;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1921px) {
   .page-wrapper .right h1 {
     font-size: 60px;
   }
@@ -43,12 +43,12 @@
   font-size: 20px;
   line-height: 160%;
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1921px) {
   .page-wrapper .right > p {
     font-size: 24px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1921px) {
   .page-wrapper .left img {
     transform: translateY(35%);
   }
