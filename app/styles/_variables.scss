@@ -6,12 +6,21 @@ $black        : #000;
 $highlight   : #AA00FF;
 
 :root {
+  --card-margin: calc(var(--card-width) / 2);
+  --card-height: 200px;
+  --card-width: calc(var(--card-height) / 1.5);
   --website-height: 500px;
   --website-width: calc(var(--website-height) / 1.5);
-  // --card-margin: calc(var(--card-width) / 2);
+  --modal-width: 1000px;
+  --modal-height: calc(var(--modal-width) / 1.78);
 
   @media screen and (min-width: 1921px) {
     --website-height: 600px;
+    --card-height: 300px;
+  }
+
+  @media screen and (max-width: 1850px) {
+    --website-height: clamp(400px, 25vw, 480px);
   }
 }
 
@@ -22,6 +31,10 @@ $highlight   : #AA00FF;
 
   @media screen and (min-width: 1921px) {
     font-size: 60px;
+  }
+
+  @media screen and (max-width: 1850px) {
+
   }
 
   @media screen and (max-width: 1440px) {

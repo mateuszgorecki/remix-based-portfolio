@@ -4,17 +4,21 @@ import { DUMMY_WEBSITES } from '~/components/websites-data'
 import WebsiteWrapper, {
   links as WebsiteWrapperStyles,
 } from '~/components/WebsiteWrapper'
+import WebsiteModal, { links as ModalStyles } from '~/components/WebsiteModal'
 
-import { motion, AnimatePresence } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { motion, AnimatePresence, useScroll } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 
 export default function PortfolioPage() {
   const initialState = {
     description: '',
     technologies: '',
+    image: '',
+    alt: '',
   }
 
   const [websiteInfo, setWebsiteInfo] = useState(initialState)
+  const [openWebsite, setOpenWebsite] = useState(false)
 
   const onTap = (event, info) => {
     if (event) {
@@ -22,6 +26,8 @@ export default function PortfolioPage() {
       setWebsiteInfo({
         description: newWebsites[0].props.description,
         technologies: newWebsites[0].props.technologies,
+        image: newWebsites[0].props.image,
+        alt: newWebsites[0].props.alt,
       })
       setWebsitesList(() => [newWebsites])
     }
@@ -40,6 +46,8 @@ export default function PortfolioPage() {
             title={website.title}
             technologies={website.technologies}
             description={website.description}
+            image={website.image}
+            alt={website.alt}
             position={counter}
             onTap={onTap}
           />
@@ -49,12 +57,19 @@ export default function PortfolioPage() {
     return list
   })
   const newWebsites = websitesList.map((website) => website)
+
   useEffect(() => {
     setWebsiteInfo({
       description: websitesList[0].props.description,
       technologies: websitesList[0].props.technologies,
+      image: websitesList[0].props.image,
+      alt: websitesList[0].props.alt,
     })
   }, [])
+
+  const openWebsiteHandler = () => {
+    setOpenWebsite((state) => !state)
+  }
 
   return (
     <PageWrapper className='wrapper'>
@@ -77,9 +92,19 @@ export default function PortfolioPage() {
           być się i głową naprzód go też Może kłamie!
         </p>
         <div className='website-info-wrapper'>
-          <div
-            className='website-info-photo'
-          ></div>
+          <div className='website-info-photo'>
+          <AnimatePresence>
+
+            <motion.img
+              layoutId='image'
+              className='info-photo'
+              src={websiteInfo.image}
+              alt={websiteInfo.alt}
+              style={{ animation: 'autoScroll 25s infinite 1s ease-in-out' }}
+              onClick={openWebsiteHandler}
+            />
+          </AnimatePresence>
+          </div>
           <div className='website-info-data'>
             <AnimatePresence mode='wait'>
               <motion.p
@@ -128,6 +153,16 @@ export default function PortfolioPage() {
           </div>
         </div>
       </div>
+      <AnimatePresence>
+        {openWebsite && (
+          <WebsiteModal
+            onClick={openWebsiteHandler}
+            src={websiteInfo.image}
+            alt={websiteInfo.alt}
+            state={openWebsite}
+          />
+        )}
+      </AnimatePresence>
     </PageWrapper>
   )
 }
@@ -135,6 +170,7 @@ export default function PortfolioPage() {
 export function links() {
   return [
     ...WebsiteWrapperStyles(),
+    ...ModalStyles(),
     { rel: 'stylesheet', href: styles },
   ]
 }

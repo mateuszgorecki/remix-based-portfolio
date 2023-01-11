@@ -1,0 +1,56 @@
+@import './variables';
+
+.modal {
+  &-wrapper {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-black;
+    filter: blur(10px);
+    backdrop-filter: blur(1px);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+  }
+
+  &-img {
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    &-wrapper {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      z-index: 10;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: var(--modal-width);
+      height: var(--modal-height);
+      border-radius: 40px;
+    }
+  }
+}
+
+.add-scroll {
+  overflow-y: scroll;
+
+  img {
+    height: auto;
+  }
+}
