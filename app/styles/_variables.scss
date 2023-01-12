@@ -14,7 +14,7 @@ $highlight   : #AA00FF;
   --modal-width: 1000px;
   --modal-height: calc(var(--modal-width) / 1.78);
 
-  @media screen and (min-width: 1921px) {
+  @media screen and (min-width: 1921px)    {
     --website-height: 600px;
     --card-height: 300px;
   }
@@ -29,7 +29,7 @@ $highlight   : #AA00FF;
   line-height: 150%;
   text-transform: uppercase;
 
-  @media screen and (min-width: 1921px) {
+  @media screen and (min-width: 1921px)   {
     font-size: 60px;
   }
 
@@ -66,7 +66,7 @@ $highlight   : #AA00FF;
   font-size: 20px;
   line-height: 160%;
 
-  @media screen and (min-width: 1921px) {
+  @media screen and (min-width: 1921px)   {
     font-size: 24px;
   }
 

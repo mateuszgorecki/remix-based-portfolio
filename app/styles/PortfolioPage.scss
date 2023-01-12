@@ -45,7 +45,7 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        margin: 4rem 0 0;
+        margin: 2rem 0 0;
 
         p {
           font-size: 1rem;
@@ -65,7 +65,7 @@
   }
 }
 
-@media screen and (min-width: 1921px) {
+@media screen and (min-width: 1921px)   {
   .wrapper {
     .left {
       .website-carousel-wrapper {

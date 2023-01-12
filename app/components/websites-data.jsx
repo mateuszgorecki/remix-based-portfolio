@@ -7,7 +7,6 @@ export const DUMMY_WEBSITES = [
     title: 'First Website',
     technologies: 'HTML, CSS, JavaScript, PHP',
     description: '1Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na tytoniu do!',
-    // image: <img src="${madbitPhoto}" alt="somephoto1" />
     image: madbitPhoto,
     alt: 'somephoto1',
   },
@@ -16,35 +15,31 @@ export const DUMMY_WEBSITES = [
     title: 'Second Website',
     technologies: 'HTML, CSS, JavaScript, PHP',
     description: '2Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na tytoniu do!',
-    // image: <img src="${corelabPhoto}" alt="somephoto2" />
     image: corelabPhoto,
-    alt:'somephoto2'
+    alt:'somephoto2',
   },
   {
     id: '3-website',
     title: 'Third Website',
     technologies: 'HTML, CSS, JavaScript, PHP',
     description: '3Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na tytoniu do!',
-    // image: <img src="${madbitPhoto}" alt="somephoto3" />
     image: madbitPhoto,
-    alt:'somephoto3'
+    alt:'somephoto3',
   },
   {
     id: '4-website',
     title: 'Fourth Website',
     technologies: 'HTML, CSS, JavaScript, PHP',
     description: '4Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na tytoniu do!',
-    // image: <img src="${corelabPhoto}" alt="somephoto4" />
     image: corelabPhoto,
-    alt:'somephoto4'
+    alt:'somephoto4',
   },
   {
     id: '5-website',
     title: 'Fifth Website',
     technologies: 'HTML, CSS, JavaScript, PHP',
     description: '5Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na tytoniu do!',
-    // image: <img src="${madbitPhoto}" alt="somephoto5" />
     image: madbitPhoto,
-    alt:'somephoto5'
+    alt:'somephoto5',
   },
 ]

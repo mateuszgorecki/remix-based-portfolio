@@ -93,17 +93,23 @@ export default function PortfolioPage() {
         </p>
         <div className='website-info-wrapper'>
           <div className='website-info-photo'>
-          <AnimatePresence>
-
-            <motion.img
-              layoutId='image'
-              className='info-photo'
-              src={websiteInfo.image}
-              alt={websiteInfo.alt}
-              style={{ animation: 'autoScroll 25s infinite 1s ease-in-out' }}
-              onClick={openWebsiteHandler}
-            />
-          </AnimatePresence>
+            <AnimatePresence>
+              <motion.img
+                // animate={{ scale: [1, 1.03, 1] }}
+                // transition={{
+                //   duration: 1,
+                //   ease: 'backInOut',
+                //   repeat: 1,
+                //   repeatDelay: 1,
+                // }}
+                layoutId='image'
+                className='info-photo'
+                src={websiteInfo.image}
+                alt={websiteInfo.alt}
+                style={{ animation: 'autoScroll 25s infinite 1s ease-in-out' }}
+                onClick={openWebsiteHandler}
+              />
+            </AnimatePresence>
           </div>
           <div className='website-info-data'>
             <AnimatePresence mode='wait'>
