@@ -1,14 +1,15 @@
 :root {
-  --card-margin: calc(var(--card-width) / 2);
   --card-height: 200px;
   --card-width: calc(var(--card-height) / 1.5);
+  --card-margin: calc(var(--card-width) / 2);
   --website-height: 500px;
   --website-width: calc(var(--website-height) / 1.5);
-  --modal-width: 1000px;
+  --modal-width: 1500px;
   --modal-height: calc(var(--modal-width) / 1.78);
 }
 @media screen and (min-width: 1921px) {
   :root {
+    --modal-width: 2000px;
     --website-height: 600px;
     --card-height: 300px;
   }
@@ -16,9 +17,15 @@
 @media screen and (max-width: 1850px) {
   :root {
     --website-height: clamp(400px, 25vw, 480px);
+    --modal-width: 1250px;
   }
 }
-
+@media screen and (max-width: 1600px) {
+  :root {
+    --card-height: 180px;
+    --modal-width: 1100px;
+  }
+}
 .motion-card-wrapper {
   margin: 0 0 0 calc(var(--card-margin) - var(--card-margin) * 2);
 }
@@ -118,6 +125,15 @@
     width: 5rem;
     height: 5rem;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+  }
+}
+@media screen and (max-width: 1600px) {
+  .motion-card-wrapper .card-wrapper {
+    border-radius: 18px;
+  }
+  .motion-card-wrapper img {
+    width: 2.8rem;
+    height: 2.8rem;
   }
 }
 

@@ -50,7 +50,6 @@
         input,
         textarea {
           transition: all 0.2s ease-in-out;
-          // background-color: transparent;
 
           &:focus {
             border: 1px solid $highlight;
@@ -64,14 +63,13 @@
           width: 160px;
           height: 100%;
           cursor: pointer;
-          // background-color: $bg-black;
         }
       }
     }
   }
 }
 
-@media screen and (min-width: 1921px)   {
+@media screen and (min-width: 1921px) {
   .wrapper {
     .right {
       & > p {
@@ -94,6 +92,22 @@
           button {
             width: 200px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .wrapper {
+    .right {
+      & > p {
+        margin: 0 0 1.5vw;
+      }
+
+      .contact-info-wrapper {
+        form {
+          height: 330px;
         }
       }
     }

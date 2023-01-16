@@ -31,10 +31,9 @@
   }
 }
 
-@media screen and (min-width: 1921px)   {
+@media screen and (min-width: 1921px) {
   .wrapper {
     .right {
-
       & > p {
         margin: 0 0 3vw;
       }
@@ -48,6 +47,36 @@
             & > p {
               &:first-child {
                 font-size: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .wrapper {
+    .right {
+      & > p {
+        margin: 0 0 1.5vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .wrapper {
+    .right {
+      .stats-wrapper {
+        ul {
+          li {
+            & > p {
+              width: 570px;
+
+              &:first-child {
+                width: 230px;
               }
             }
           }

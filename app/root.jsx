@@ -14,7 +14,7 @@ import MainNavigation from './components/MainNavigation'
 import { links as pageWrapperStyles } from './components/PageWrapper'
 
 import styles from '~/styles/global.css'
-import navStyles from '~/styles/MainNavigation.module.css'
+import navStyles from '~/styles/MainNavigation.css'
 
 import bgPhoto from '../public/big-portrait.png'
 import bgShape from '../public/bg-shape-full.svg'

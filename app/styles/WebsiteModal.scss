@@ -43,6 +43,11 @@
       width: var(--modal-width);
       height: var(--modal-height);
       border-radius: 40px;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar{
+        display: none;
+      }
     }
   }
 }

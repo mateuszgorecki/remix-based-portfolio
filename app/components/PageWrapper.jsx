@@ -20,6 +20,7 @@ const PageWrapper = (props) => {
         damping: 20,
       }}
       className={`page-wrapper ${props.className}`}
+      onClick={props.onClick}
     >
       {props.children}
     </motion.div>

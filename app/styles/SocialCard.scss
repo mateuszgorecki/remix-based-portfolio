@@ -12,16 +12,16 @@
       z-index: #{$i};
     }
 
-  .card-wrapper {
-    background-color: $bg-black;
-    border-radius: 20px;
-    height: var(--card-height);
-    width: var(--card-width);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 0 1px $pure-white, 0 0 0 10px $bg-black;
-    border: 1px solid $pure-white;
+    .card-wrapper {
+      background-color: $bg-black;
+      border-radius: 20px;
+      height: var(--card-height);
+      width: var(--card-width);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 0 1px $pure-white, 0 0 0 10px $bg-black;
+      border: 1px solid $pure-white;
     }
 
     img {
@@ -34,40 +34,47 @@
   }
 }
 
-@media screen and (min-width: 1921px)  {
+@media screen and (min-width: 1921px) {
   .motion-card-wrapper {
     .card-wrapper {
       box-shadow: 0 0 0 1px $pure-white, 0 0 0 15px $bg-black;
-      }
+    }
 
-      img {
-        width: 5rem;
-        height: 5rem;
-        filter: drop-shadow(0 0 5px rgba($pure-white, 0.6));
-      }
+    img {
+      width: 5rem;
+      height: 5rem;
+      filter: drop-shadow(0 0 5px rgba($pure-white, 0.6));
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .motion-card-wrapper {
+    .card-wrapper {
+      border-radius: 18px;
+    }
+
+    img {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
   }
 }
 
 @media screen and (max-width: 1440px) {
-
 }
 
 @media screen and (max-width: 1280px) {
-
 }
 
 @media screen and (max-width: 1120px) {
-
 }
 
 @media screen and (max-width: 992px) {
-
 }
 
 @media screen and (max-width: 768px) {
-
 }
 
 @media screen and (max-width: 576px) {
-
 }

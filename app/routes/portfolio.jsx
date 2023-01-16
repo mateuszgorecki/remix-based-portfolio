@@ -95,18 +95,10 @@ export default function PortfolioPage() {
           <div className='website-info-photo'>
             <AnimatePresence>
               <motion.img
-                // animate={{ scale: [1, 1.03, 1] }}
-                // transition={{
-                //   duration: 1,
-                //   ease: 'backInOut',
-                //   repeat: 1,
-                //   repeatDelay: 1,
-                // }}
                 layoutId='image'
                 className='info-photo'
                 src={websiteInfo.image}
                 alt={websiteInfo.alt}
-                style={{ animation: 'autoScroll 25s infinite 1s ease-in-out' }}
                 onClick={openWebsiteHandler}
               />
             </AnimatePresence>

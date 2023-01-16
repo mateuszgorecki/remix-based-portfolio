@@ -9,7 +9,16 @@ import { motion } from 'framer-motion'
 export default function Index() {
   const [isOn, setIsOn] = useState(false)
 
-  const toggleCards = () => setIsOn(!isOn)
+  const toggleCards = (e) => {
+    setIsOn(!isOn)
+    console.log(e.target)
+  }
+
+  const closeCards = (e) => {
+    if (!e.target.classList.contains('socials-card-wrapper') && isOn) {
+      setIsOn(false)
+    }
+  }
 
   const spring = {
     type: 'spring',
@@ -25,7 +34,6 @@ export default function Index() {
       className='motion-card-wrapper'
     >
       <SocialCard
-
         id={card.id}
         src={card.src}
         href={card.href}
@@ -35,10 +43,14 @@ export default function Index() {
   ))
 
   return (
-    <PageWrapper className='wrapper'>
+    <PageWrapper
+      className='wrapper'
+      onClick={closeCards}
+    >
       <div className='left'></div>
       <div className='right'>
         <h1>Let's start</h1>
+
         <p>
           A Ośla Łączka Łączka miał w tej zbiorników, z wysoka docierały rakiet,
           miejscem, z którego całkiem pewien. Można cieniem u stóp, pęcherz

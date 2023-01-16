@@ -1,14 +1,15 @@
 :root {
-  --card-margin: calc(var(--card-width) / 2);
   --card-height: 200px;
   --card-width: calc(var(--card-height) / 1.5);
+  --card-margin: calc(var(--card-width) / 2);
   --website-height: 500px;
   --website-width: calc(var(--website-height) / 1.5);
-  --modal-width: 1000px;
+  --modal-width: 1500px;
   --modal-height: calc(var(--modal-width) / 1.78);
 }
 @media screen and (min-width: 1921px) {
   :root {
+    --modal-width: 2000px;
     --website-height: 600px;
     --card-height: 300px;
   }
@@ -16,9 +17,15 @@
 @media screen and (max-width: 1850px) {
   :root {
     --website-height: clamp(400px, 25vw, 480px);
+    --modal-width: 1250px;
   }
 }
-
+@media screen and (max-width: 1600px) {
+  :root {
+    --card-height: 180px;
+    --modal-width: 1100px;
+  }
+}
 .wrapper .left .website-carousel-wrapper {
   top: -8%;
   left: 4%;
@@ -46,6 +53,7 @@
   object-position: 0 0;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  animation: autoScroll 30s infinite 1.5s ease-in-out;
 }
 .wrapper .right .website-info-data {
   width: 350px;
@@ -74,7 +82,7 @@
     margin: 2rem 0 5rem;
   }
   .wrapper .right .website-info-wrapper {
-    gap: 3rem;
+    gap: 2rem;
     justify-content: flex-start;
   }
   .wrapper .right .website-info-data {
@@ -85,6 +93,25 @@
     font-size: 1.2rem;
   }
 }
+@media screen and (max-width: 1850px) {
+  .wrapper .left .website-carousel-wrapper {
+    top: -14%;
+    left: 2%;
+  }
+  .wrapper .right > p {
+    margin: 0 0 1.5vw;
+  }
+  .wrapper .right .website-info-wrapper {
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+  .wrapper .right .website-info-data {
+    width: 28vw;
+  }
+  .wrapper .right .website-info-data p {
+    font-size: 1rem;
+  }
+}
 @keyframes autoScroll {
   0% {
     object-position: top;
@@ -92,7 +119,7 @@
   50% {
     object-position: bottom;
   }
-  100% {
+  95%, 100% {
     object-position: top;
   }
 }
