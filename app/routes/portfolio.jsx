@@ -85,12 +85,6 @@ export default function PortfolioPage() {
       </div>
       <div className='right'>
         <h1>Portfolio</h1>
-        <p>
-          Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni
-          małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na
-          tytoniu do żucia i fotografiach by odłożył, a za resztę musiałby to
-          być się i głową naprzód go też Może kłamie!
-        </p>
         <div className='website-info-wrapper'>
           <div className='website-info-photo'>
             <AnimatePresence>

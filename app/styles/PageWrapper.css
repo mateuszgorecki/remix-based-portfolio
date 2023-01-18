@@ -53,11 +53,6 @@
   line-height: 150%;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1921px) {
-  .page-wrapper .right h1 {
-    font-size: 60px;
-  }
-}
 @media screen and (max-width: 1850px) {
   .page-wrapper .right h1 {
     font-size: 55px;
@@ -68,14 +63,14 @@
     font-size: 50px;
   }
 }
+@media screen and (min-width: 1921px) {
+  .page-wrapper .right h1 {
+    font-size: 60px;
+  }
+}
 .page-wrapper .right > p {
   font-size: 20px;
   line-height: 160%;
-}
-@media screen and (min-width: 1921px) {
-  .page-wrapper .right > p {
-    font-size: 24px;
-  }
 }
 @media screen and (min-width: 1600px) {
   .page-wrapper .right > p {
@@ -83,17 +78,11 @@
   }
 }
 @media screen and (min-width: 1921px) {
-  .page-wrapper .left > img {
-    transform: translateY(35%);
-  }
-  .page-wrapper .right {
-    max-width: none;
-    padding: 5vw 250px 0 0;
-  }
-  .page-wrapper .right h1 {
-    margin: 0 0 2.5vw;
+  .page-wrapper .right > p {
+    font-size: 24px;
   }
 }
+
 @media screen and (max-width: 1850px) {
   .page-wrapper .right {
     max-width: none;
@@ -114,6 +103,18 @@
   }
   .page-wrapper .right h1 {
     margin: 0 0 1vw;
+  }
+}
+@media screen and (min-width: 1921px) {
+  .page-wrapper .left > img {
+    transform: translateY(35%);
+  }
+  .page-wrapper .right {
+    max-width: none;
+    padding: 5vw 250px 0 0;
+  }
+  .page-wrapper .right h1 {
+    margin: 0 0 2.5vw;
   }
 }
 

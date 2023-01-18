@@ -3,6 +3,7 @@ import styles from '~/styles/AboutPage.css'
 import photo from '../../public/small-portrait.png'
 export default function AboutPage() {
   return (
+
     <PageWrapper className='wrapper'>
       <div className='left'>
         <img
@@ -12,12 +13,7 @@ export default function AboutPage() {
       </div>
       <div className='right'>
         <h1>About me</h1>
-        <p>
-          Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni
-          małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na
-          tytoniu do żucia i fotografiach by odłożył, a za resztę musiałby to
-          być się i głową naprzód go też Może kłamie!
-        </p>
+        <p>Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na tytoniu do żucia i fotografiach by odłożył, a za resztę musiałby to być się i głową naprzód go też Może kłamie!</p>
         <div className='stats-wrapper'>
           <ul>
             <li>
@@ -37,7 +33,9 @@ export default function AboutPage() {
             </li>
             <li>
               <p>Skills: </p>
-              <p>JavaScript, Reactjs, SCSS, HTML, Remixjs, Node.js, Framer-Motion</p>
+              <p>
+                JavaScript, Reactjs, SCSS, HTML, Remixjs, Node.js, Framer-Motion
+              </p>
             </li>
           </ul>
         </div>

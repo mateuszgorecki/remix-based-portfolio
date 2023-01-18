@@ -6,10 +6,10 @@ import styles from '~/styles/PageWrapper.css'
 const PageWrapper = (props) => {
   return (
     <motion.div
-    mode='wait'
+      mode='wait'
       key={useLocation().key}
       initial={{
-        scale: .5,
+        scale: 0.5,
       }}
       animate={{
         scale: 1,

@@ -11,7 +11,6 @@ export default function Index() {
 
   const toggleCards = (e) => {
     setIsOn(!isOn)
-    console.log(e.target)
   }
 
   const closeCards = (e) => {

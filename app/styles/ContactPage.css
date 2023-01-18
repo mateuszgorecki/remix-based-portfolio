@@ -29,6 +29,12 @@
 .wrapper .right > p {
   margin: 1rem 0 2rem;
 }
+.wrapper .right > p a {
+  transition: all 0.2s ease-in-out;
+}
+.wrapper .right > p a:hover {
+  color: #aa00ff;
+}
 .wrapper .right .contact-info-wrapper form {
   display: flex;
   height: 350px;
@@ -83,6 +89,14 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1850px) {
+  .wrapper .right > p {
+    margin: 0 0 1.5vw;
+  }
+  .wrapper .right .contact-info-wrapper form {
+    height: 330px;
+  }
+}
 @media screen and (min-width: 1921px) {
   .wrapper .right > p {
     margin: 0 0 3rem;
@@ -99,14 +113,6 @@
   }
   .wrapper .right .contact-info-wrapper form button {
     width: 200px;
-  }
-}
-@media screen and (max-width: 1850px) {
-  .wrapper .right > p {
-    margin: 0 0 1.5vw;
-  }
-  .wrapper .right .contact-info-wrapper form {
-    height: 330px;
   }
 }
 

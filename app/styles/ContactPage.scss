@@ -1,9 +1,19 @@
 @import './variables';
 
+
+
 .wrapper {
   .right {
     & > p {
       margin: 1rem 0 2rem;
+
+      a {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: $highlight;
+        }
+      }
     }
 
     .contact-info-wrapper {
@@ -69,35 +79,6 @@
   }
 }
 
-@media screen and (min-width: 1921px) {
-  .wrapper {
-    .right {
-      & > p {
-        margin: 0 0 3rem;
-      }
-
-      .contact-info-wrapper {
-        form {
-          height: 500px;
-
-          input,
-          textarea {
-            padding: 30px;
-          }
-
-          textarea {
-            height: 200px;
-          }
-
-          button {
-            width: 200px;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 1850px) {
   .wrapper {
     .right {
@@ -130,4 +111,33 @@
 }
 
 @media screen and (max-width: 576px) {
+}
+
+@media screen and (min-width: 1921px) {
+  .wrapper {
+    .right {
+      & > p {
+        margin: 0 0 3rem;
+      }
+
+      .contact-info-wrapper {
+        form {
+          height: 500px;
+
+          input,
+          textarea {
+            padding: 30px;
+          }
+
+          textarea {
+            height: 200px;
+          }
+
+          button {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
 }

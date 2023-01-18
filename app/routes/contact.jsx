@@ -25,10 +25,8 @@ export default function ContactPage() {
       <div className='right'>
         <h1>Contact</h1>
         <p>
-          Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni
-          małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na
-          tytoniu do żucia i fotografiach by odłożył, a za resztę musiałby to
-          być się i głową naprzód go też Może kłamie!
+          Contact me via: <a href='mailto:example@mail.com'>example@mail.com</a>
+          , or by contact form below if you willing to cooperation.
         </p>
         <div className='contact-info-wrapper'>
           <Form onSubmit={onSubmitHandler}>

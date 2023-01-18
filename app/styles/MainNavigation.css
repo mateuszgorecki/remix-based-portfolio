@@ -143,9 +143,9 @@ header nav ul .socials {
     font-size: 25px;
   }
   header nav ul li a::before {
-    width: 22px;
-    height: 22px;
-    top: -22px;
+    width: 18px;
+    height: 18px;
+    top: -20px;
   }
   header nav ul .socials {
     gap: 1rem;

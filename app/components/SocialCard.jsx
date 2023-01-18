@@ -12,7 +12,7 @@ export default function SocialCard(props) {
       target='_blank'
       rel='noreferrer'
       whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 500, damping: 10 }}
+      transition={{ type: 'spring', stiffness: 500, damping: 10 }}
     >
       <img
         src={src}

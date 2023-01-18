@@ -34,24 +34,7 @@
   }
 }
 
-@media screen and (min-width: 1921px) {
-  .page-wrapper {
-    .left {
-      & > img {
-        transform: translateY(35%);
-      }
-    }
 
-    .right {
-      max-width: none;
-      padding: 5vw 250px 0 0;
-
-      h1 {
-        margin: 0 0 2.5vw;
-      }
-    }
-  }
-}
 
 @media screen and (max-width: 1850px) {
   .page-wrapper {
@@ -102,4 +85,23 @@
 }
 
 @media screen and (max-width: 576px) {
+}
+
+@media screen and (min-width: 1921px) {
+  .page-wrapper {
+    .left {
+      & > img {
+        transform: translateY(35%);
+      }
+    }
+
+    .right {
+      max-width: none;
+      padding: 5vw 250px 0 0;
+
+      h1 {
+        margin: 0 0 2.5vw;
+      }
+    }
+  }
 }

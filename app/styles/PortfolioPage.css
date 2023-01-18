@@ -112,6 +112,12 @@
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 1600px) {
+  .wrapper .left .website-carousel-wrapper {
+    top: 0%;
+    left: 18%;
+  }
+}
 @keyframes autoScroll {
   0% {
     object-position: top;

@@ -55,9 +55,7 @@ $highlight: #aa00ff;
   line-height: 150%;
   text-transform: uppercase;
 
-  @media screen and (min-width: 1921px) {
-    font-size: 60px;
-  }
+
 
   @media screen and (max-width: 1850px) {
     font-size: 55px;
@@ -85,15 +83,17 @@ $highlight: #aa00ff;
 
   @media screen and (max-width: 576px) {
   }
+
+  @media screen and (min-width: 1921px) {
+    font-size: 60px;
+  }
 }
 
 @mixin small-text {
   font-size: 20px;
   line-height: 160%;
 
-  @media screen and (min-width: 1921px) {
-    font-size: 24px;
-  }
+
 
   @media screen and (min-width: 1600px) {
     font-size: 20px;
@@ -115,5 +115,9 @@ $highlight: #aa00ff;
   }
 
   @media screen and (max-width: 576px) {
+  }
+
+  @media screen and (min-width: 1921px) {
+    font-size: 24px;
   }
 }

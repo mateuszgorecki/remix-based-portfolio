@@ -2,7 +2,7 @@ import styles from '~/styles/WebsiteWrapper.css'
 import { motion } from 'framer-motion'
 
 export default function WebsiteWrapper(props) {
-  const { id, title, description, technologies, style, position, onTap, image, alt } = props
+  const { title, style, position, onTap, image, alt } = props
 
   return (
     <motion.li
@@ -12,7 +12,6 @@ export default function WebsiteWrapper(props) {
       onTap={onTap}
     >
     <img src={image} alt={alt} />
-      {/* <p>{technologies}</p> */}
       <div className='website-blur'></div>
       <p>{title}</p>
     </motion.li>
