@@ -31,6 +31,12 @@
     --modal-width: 1000px;
   }
 }
+@media screen and (max-width: 1280px) {
+  :root {
+    --website-height: 350px;
+    --modal-width: 900px;
+  }
+}
 .motion-card-wrapper {
   margin: 0 0 0 calc(var(--card-margin) - var(--card-margin) * 2);
 }

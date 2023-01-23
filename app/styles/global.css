@@ -32,6 +32,12 @@
     --modal-width: 1000px;
   }
 }
+@media screen and (max-width: 1280px) {
+  :root {
+    --website-height: 350px;
+    --modal-width: 900px;
+  }
+}
 * {
   font-family: "Michroma", sans-serif;
   margin: 0;

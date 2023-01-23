@@ -113,6 +113,19 @@
 }
 
 @media screen and (max-width: 1280px) {
+  .website {
+    &-wrapper {
+      border-radius: 20px;
+    }
+
+    &-blur {
+      border-radius: 20px;
+    }
+
+    &-title {
+      font-size: 1rem;
+    }
+  }
 }
 
 @media screen and (max-width: 1120px) {

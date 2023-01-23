@@ -31,6 +31,12 @@
     --modal-width: 1000px;
   }
 }
+@media screen and (max-width: 1280px) {
+  :root {
+    --website-height: 350px;
+    --modal-width: 900px;
+  }
+}
 .wrapper .right > p {
   margin: 1rem 0 2rem;
 }
@@ -100,6 +106,11 @@
   }
   .wrapper .right .contact-info-wrapper form {
     height: 330px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .wrapper .right .contact-info-wrapper form {
+    height: 350px;
   }
 }
 @media screen and (min-width: 1921px) {

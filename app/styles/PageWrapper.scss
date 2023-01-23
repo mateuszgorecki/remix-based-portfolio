@@ -87,6 +87,21 @@
 }
 
 @media screen and (max-width: 1280px) {
+  .page-wrapper {
+    .left {
+      & > img {
+        width: 250px;
+      }
+    }
+
+    .right {
+      padding: 2vw 50px 0 0;
+
+      // & * {
+      //   z-index: 6;
+      // }
+    }
+  }
 }
 
 @media screen and (max-width: 1120px) {

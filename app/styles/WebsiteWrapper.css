@@ -31,6 +31,12 @@
     --modal-width: 1000px;
   }
 }
+@media screen and (max-width: 1280px) {
+  :root {
+    --website-height: 350px;
+    --modal-width: 900px;
+  }
+}
 .website-wrapper {
   position: absolute;
   display: flex;
@@ -116,6 +122,17 @@
   }
   .website-blur {
     border-radius: 30px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .website-wrapper {
+    border-radius: 20px;
+  }
+  .website-blur {
+    border-radius: 20px;
+  }
+  .website-title {
+    font-size: 1rem;
   }
 }
 

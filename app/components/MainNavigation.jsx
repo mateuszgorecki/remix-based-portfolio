@@ -1,4 +1,4 @@
-import { NavLink, Link } from '@remix-run/react'
+import { NavLink } from '@remix-run/react'
 import { motion } from 'framer-motion'
 const variants = {
   open: {

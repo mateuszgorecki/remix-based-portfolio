@@ -31,6 +31,12 @@
     --modal-width: 1000px;
   }
 }
+@media screen and (max-width: 1280px) {
+  :root {
+    --website-height: 350px;
+    --modal-width: 900px;
+  }
+}
 .wrapper .left .website-carousel-wrapper {
   top: -8%;
   left: 4%;
@@ -142,6 +148,21 @@
   }
   .wrapper .right .website-info-data {
     max-height: 28vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .wrapper .left .website-carousel-wrapper {
+    top: 9%;
+    left: 10%;
+  }
+  .wrapper .right .website-info-photo {
+    max-height: 35vw;
+  }
+  .wrapper .right .website-info-photo .info-photo {
+    border-radius: 20px;
+  }
+  .wrapper .right .website-info-data {
+    max-height: 35vw;
   }
 }
 @keyframes autoScroll {

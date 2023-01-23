@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
   useLocation,
 } from '@remix-run/react'
-import { AnimatePresence, motion, useCycle } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import MainNavigation from './components/MainNavigation'
 
 import { links as pageWrapperStyles } from './components/PageWrapper'

@@ -2,7 +2,7 @@
 
 .modal {
   &-wrapper {
-    z-index: 9;
+    z-index: 11;
     position: absolute;
     top: 0;
     left: 0;
@@ -21,7 +21,7 @@
     background-color: $bg-black;
     filter: blur(10px);
     backdrop-filter: blur(1px);
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;
   }
 
@@ -45,7 +45,7 @@
       border-radius: 40px;
       scrollbar-width: none;
 
-      &::-webkit-scrollbar{
+      &::-webkit-scrollbar {
         display: none;
       }
     }
@@ -58,4 +58,28 @@
   img {
     height: auto;
   }
+}
+
+@media screen and (max-width: 1280px) {
+  .modal {
+    &-img {
+      border-radius: 20px;
+
+      &-wrapper {
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
 }

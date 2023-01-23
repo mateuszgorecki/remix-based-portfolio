@@ -31,8 +31,14 @@
     --modal-width: 1000px;
   }
 }
+@media screen and (max-width: 1280px) {
+  :root {
+    --website-height: 350px;
+    --modal-width: 900px;
+  }
+}
 .modal-wrapper {
-  z-index: 9;
+  z-index: 11;
   position: absolute;
   top: 0;
   left: 0;
@@ -82,6 +88,15 @@
 }
 .add-scroll img {
   height: auto;
+}
+
+@media screen and (max-width: 1280px) {
+  .modal-img {
+    border-radius: 20px;
+  }
+  .modal-img-wrapper {
+    border-radius: 20px;
+  }
 }
 
 /*# sourceMappingURL=WebsiteModal.css.map */
