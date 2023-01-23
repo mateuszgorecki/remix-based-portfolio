@@ -26,6 +26,11 @@
     --modal-width: 1100px;
   }
 }
+@media screen and (max-width: 1440px) {
+  :root {
+    --modal-width: 1000px;
+  }
+}
 .motion-card-wrapper {
   margin: 0 0 0 calc(var(--card-margin) - var(--card-margin) * 2);
 }

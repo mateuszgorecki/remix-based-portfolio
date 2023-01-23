@@ -25,8 +25,8 @@ export default function ContactPage() {
       <div className='right'>
         <h1>Contact</h1>
         <p>
-          Contact me via: <a href='mailto:example@mail.com'>example@mail.com</a>
-          , or by contact form below if you willing to cooperation.
+          Contact me via: <a href='mailto:mateusz.gorecki.dev@gmail.com'>mateusz.gorecki.dev@gmail.com</a>
+          , or by contact form below.
         </p>
         <div className='contact-info-wrapper'>
           <Form onSubmit={onSubmitHandler}>

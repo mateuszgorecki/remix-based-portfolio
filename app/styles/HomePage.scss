@@ -8,10 +8,11 @@
       position: relative;
       cursor: pointer;
       margin: 20px 0 0;
+      align-self: center;
 
       &[data-ison='true'] {
         justify-content: space-between;
-        width: 100%;
+        width: 60%;
 
         .social-cards-overlay {
           z-index: -1;
@@ -63,6 +64,13 @@
 }
 
 @media screen and (max-width: 1440px) {
+  .wrapper {
+    .right {
+      .socials-card-wrapper {
+        margin: 2vw 0 0;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1280px) {

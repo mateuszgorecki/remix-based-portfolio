@@ -27,6 +27,11 @@
     --modal-width: 1100px;
   }
 }
+@media screen and (max-width: 1440px) {
+  :root {
+    --modal-width: 1000px;
+  }
+}
 * {
   font-family: "Michroma", sans-serif;
   margin: 0;

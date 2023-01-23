@@ -87,6 +87,23 @@
 }
 
 @media screen and (max-width: 1440px) {
+  .wrapper {
+    .right {
+      .stats-wrapper {
+        ul {
+          li {
+            font-size: 18px;
+
+            & > p {
+              &:first-child {
+                font-size: 28px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1280px) {

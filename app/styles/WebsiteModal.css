@@ -26,6 +26,11 @@
     --modal-width: 1100px;
   }
 }
+@media screen and (max-width: 1440px) {
+  :root {
+    --modal-width: 1000px;
+  }
+}
 .modal-wrapper {
   z-index: 9;
   position: absolute;

@@ -13,7 +13,7 @@ export default function WebsiteWrapper(props) {
     >
     <img src={image} alt={alt} />
       <div className='website-blur'></div>
-      <p>{title}</p>
+      <p className='website-title'>{title}</p>
     </motion.li>
   )
 }

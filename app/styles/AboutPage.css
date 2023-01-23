@@ -26,6 +26,11 @@
     --modal-width: 1100px;
   }
 }
+@media screen and (max-width: 1440px) {
+  :root {
+    --modal-width: 1000px;
+  }
+}
 .wrapper .right > p {
   margin: 30px 0 60px;
 }
@@ -73,6 +78,14 @@
   }
   .wrapper .right .stats-wrapper ul li > p:first-child {
     width: 230px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .wrapper .right .stats-wrapper ul li {
+    font-size: 18px;
+  }
+  .wrapper .right .stats-wrapper ul li > p:first-child {
+    font-size: 28px;
   }
 }
 

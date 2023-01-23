@@ -26,6 +26,11 @@
     --modal-width: 1100px;
   }
 }
+@media screen and (max-width: 1440px) {
+  :root {
+    --modal-width: 1000px;
+  }
+}
 header {
   display: flex;
   justify-content: flex-end;
@@ -149,6 +154,12 @@ header nav ul .socials {
   }
   header nav ul .socials {
     gap: 1rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  header nav {
+    width: 65%;
+    padding: 4vw 80px 0 0;
   }
 }
 
