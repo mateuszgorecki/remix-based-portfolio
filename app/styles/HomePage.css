@@ -1,5 +1,5 @@
 :root {
-  --card-height: 200px;
+  --card-height: 250px;
   --card-width: calc(var(--card-height) / 1.5);
   --card-margin: calc(var(--card-width) / 2);
   --website-height: 500px;
@@ -41,7 +41,7 @@
 }
 .wrapper .right .socials-card-wrapper[data-ison=true] {
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
 }
 .wrapper .right .socials-card-wrapper[data-ison=true] .social-cards-overlay {
   z-index: -1;
@@ -62,9 +62,12 @@
     margin: 3vw 0 0;
   }
 }
-@media screen and (min-width: 1800px) {
+@media screen and (max-width: 1850px) {
   .wrapper .right .socials-card-wrapper {
     margin: 2vw 0 0;
+  }
+  .wrapper .right .socials-card-wrapper[data-ison=true] {
+    width: 60%;
   }
 }
 @media screen and (max-width: 1600px) {

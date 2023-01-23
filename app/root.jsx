@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
   useLocation,
 } from '@remix-run/react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useCycle } from 'framer-motion'
 import MainNavigation from './components/MainNavigation'
 
 import { links as pageWrapperStyles } from './components/PageWrapper'
@@ -18,12 +18,35 @@ import navStyles from '~/styles/MainNavigation.css'
 import bgPhoto from '../public/big-portrait.png'
 import bgShape from '../public/bg-shape-full.svg'
 import { useEffect, useState } from 'react'
+import { MenuToggle } from './components/MenuToggle'
 
 export const meta = () => ({
   charset: 'utf-8',
   title: 'Portfolio',
   viewport: 'width=device-width,initial-scale=1',
 })
+
+const sidebar = {
+  open: () => ({
+    clipPath: `circle(${
+      typeof window !== 'undefined' ? window.innerHeight : 1000
+    }px at 350px 50px)`,
+    transition: {
+      type: 'spring',
+      stiffness: 70,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: 'circle(30px at 350px 50px)',
+    transition: {
+      delay: 0.4,
+      type: 'spring',
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+}
 
 export default function App() {
   const [isHome, setIsHome] = useState(true)
@@ -34,6 +57,10 @@ export default function App() {
     else setIsHome(false)
   }, [location])
 
+  const [isOpen, toggleOpen] = useState(
+    typeof window !== 'undefined' && window.innerWidth <= 1280 ? false : true
+  )
+
   return (
     <html lang='en'>
       <head>
@@ -42,9 +69,28 @@ export default function App() {
       </head>
       <body>
         <header>
-          <MainNavigation />
+          <motion.nav
+            initial={false}
+            animate={isOpen ? 'open' : 'closed'}
+          >
+            <motion.div
+              className='background'
+              variants={sidebar}
+            />
+            <MainNavigation
+              isOpen={isOpen}
+              toggleOpen={toggleOpen}
+            />
+            <MenuToggle toggle={() => toggleOpen((prev) => !prev)} />
+          </motion.nav>
         </header>
-        <main>
+        <main
+          onClick={() =>
+            typeof window !== 'undefined' && window.innerWidth <= 1280 && isOpen
+              ? toggleOpen(false)
+              : null
+          }
+        >
           <AnimatePresence
             mode='wait'
             initial={false}

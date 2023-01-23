@@ -1,5 +1,6 @@
 @import './variables';
 
+
 header {
   display: flex;
   justify-content: flex-end;
@@ -71,6 +72,23 @@ header {
         gap: 2rem;
       }
     }
+  }
+
+  .burger {
+    display: none;
+    outline: none;
+      border: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      cursor: pointer;
+      position: absolute;
+      top: 28px;
+      right: 24px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: transparent;
   }
 }
 
@@ -179,6 +197,96 @@ header {
 }
 
 @media screen and (max-width: 1280px) {
+  .background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    backdrop-filter: blur(20px);
+  }
+
+
+
+  header {
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    // backdrop-filter: blur(20px);
+    z-index: 10;
+
+    nav {
+      width: fit-content;
+      padding: 0;
+
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+
+        li {
+          a {
+            text-decoration: none;
+            font-size: 36px;
+            line-height: 51px;
+            color: $white;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+            border: none;
+            outline: none;
+
+            &::before {
+              display: none;
+              // content: '';
+              // width: 22px;
+              // height: 22px;
+              // border-radius: 50%;
+              // position: absolute;
+              // background-color: $pure-white;
+              // top: -22px;
+              // left: 50%;
+              // transform: translateX(-50%);
+              // opacity: 0;
+              // transition: all 0.3s ease-in-out;
+            }
+
+            &.active {
+              color: $pure-white;
+
+              &::before {
+                opacity: 1;
+              }
+            }
+
+            &:hover {
+              color: $pure-white;
+              svg {
+                path {
+                  fill: $pure-white;
+                }
+              }
+            }
+          }
+
+        }
+
+        .socials {
+          display: flex;
+          gap: 2rem;
+        }
+      }
+    }
+
+    .burger {
+      display: block;
+    }
+  }
 }
 
 @media screen and (max-width: 1120px) {

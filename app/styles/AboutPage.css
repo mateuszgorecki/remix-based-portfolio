@@ -1,5 +1,5 @@
 :root {
-  --card-height: 200px;
+  --card-height: 250px;
   --card-width: calc(var(--card-height) / 1.5);
   --card-margin: calc(var(--card-width) / 2);
   --website-height: 500px;
