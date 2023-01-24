@@ -53,7 +53,6 @@ export default function ContactPage() {
         </p>
         <div className='contact-info-wrapper'>
           <Form
-            action='/contact'
             method='post'
             value='contact'
           >
