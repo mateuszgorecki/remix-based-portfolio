@@ -28,7 +28,7 @@ export async function action({ request }) {
   const email = formData.get('email')
   const message = formData.get('message')
   const baseUrl = request.url
-  await fetch(`${baseUrl}/contact/form`, {
+  await fetch(`${baseUrl}/form`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -37,7 +37,7 @@ export async function action({ request }) {
       name,
       email,
       message,
-      'form-name': 'contact',
+      formName: 'contact',
     },
   })
   return redirect('/contact')
