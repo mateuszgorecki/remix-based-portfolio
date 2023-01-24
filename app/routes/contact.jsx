@@ -12,7 +12,7 @@ export async function action({ request }) {
   const formData = await request.formData()
   const name = formData.get('name')
   const baseUrl = request.url
-  await fetch(`${baseUrl}`, {
+  await fetch(`${baseUrl}/form`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -50,11 +50,11 @@ export default function ContactPage() {
         </p>
         <div className='contact-info-wrapper'>
           <Form
-            // action='/contact'
+            action='/?index'
             method='post'
             data-netlify='true'
             value='contact'
-            // netlify-honeypot='bot-field'
+            netlify-honeypot='bot-field'
           >
             <div>
               <input
