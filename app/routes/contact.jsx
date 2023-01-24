@@ -40,7 +40,7 @@ export async function action({ request }) {
       formName: 'contact',
     },
   })
-  return redirect('/contact')
+  return null
 }
 
 export default function ContactPage() {
