@@ -28,6 +28,7 @@ export async function action({ request }) {
   const email = formData.get('email')
   const message = formData.get('message')
   const baseUrl = request.url
+
   await fetch(`${baseUrl}/form`, {
     method: 'POST',
     headers: {
@@ -71,7 +72,7 @@ export default function ContactPage() {
         </p>
         <div className='contact-info-wrapper'>
           <form
-            action='/contact/?index'
+            action='/contact'
             method='post'
             value='contact'
           >
