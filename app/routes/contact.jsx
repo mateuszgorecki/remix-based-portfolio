@@ -6,21 +6,7 @@ import { motion } from 'framer-motion'
 import { redirect } from '@remix-run/server-runtime'
 
 export async function loader() {
-  return (
-    <div
-      style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        backgroundColor: '#fff',
-        padding: '20px',
-        fontSize: '2rem',
-      }}
-    >
-      Loading...
-    </div>
-  )
+  return null
 }
 export async function action({ request }) {
   const formData = await request.formData()
@@ -29,17 +15,13 @@ export async function action({ request }) {
   const message = formData.get('message')
   const baseUrl = request.url
 
-  await fetch(`${baseUrl}/form`, {
+   await fetch(`${baseUrl}/form`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: {
-      name,
-      email,
-      message,
-      formName: 'contact',
-    },
+    body: `name=${name}&email=${email}&message=${message}&form-name=contact`
+    ,
   })
   return null
 }
