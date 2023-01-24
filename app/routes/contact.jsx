@@ -50,7 +50,7 @@ export default function ContactPage() {
         </p>
         <div className='contact-info-wrapper'>
           <Form
-            action='/?index'
+            action='/contact/?index'
             method='post'
             data-netlify='true'
             value='contact'
