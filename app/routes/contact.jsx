@@ -15,13 +15,12 @@ export async function action({ request }) {
   const message = formData.get('message')
   const baseUrl = request.url
 
-   await fetch(`${baseUrl}/form`, {
+  await fetch(`${baseUrl}/form`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: `name=${name}&email=${email}&message=${message}&form-name=contact`
-    ,
+    body: `name=${name}&email=${email}&message=${message}&form-name=contact`,
   })
   return null
 }
@@ -54,11 +53,16 @@ export default function ContactPage() {
         </p>
         <div className='contact-info-wrapper'>
           <form
-            action='/contact'
+            action='/contact/?index'
             method='post'
             value='contact'
           >
             <div>
+              <input
+                hidden
+                name='form-name'
+                value='contact'
+              />
               <input
                 type='text'
                 placeholder='your name'
@@ -71,7 +75,6 @@ export default function ContactPage() {
               />
               <textarea
                 name='message'
-                id=''
                 placeholder='message'
               />
             </div>
