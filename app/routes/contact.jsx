@@ -59,16 +59,9 @@ export default function ContactPage() {
           <form
             action='/contact/?index'
             method='post'
-            data-netlify='true'
             value='contact'
-            netlify-honeypot='bot-field'
           >
             <div>
-              <input
-                hidden
-                name='bot-field'
-                placeholder='don"t fill if you are human'
-              />
               <input
                 type='text'
                 placeholder='your name'

@@ -14,11 +14,22 @@
   </head>
   <body>
     <form
-    name="contact"
+      name="contact"
       method="post"
       netlify
+      netlify-honeypot="bot-field"
     >
       <div>
+        <input
+          hidden
+          name="bot-field"
+          placeholder='don"t fill if you are human'
+        />
+        <input
+          hidden
+          name="form-name"
+          value="contact"
+        />
         <input
           hidden
           name="bot-field"
