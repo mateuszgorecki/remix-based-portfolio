@@ -11,7 +11,7 @@ export default function WebsiteWrapper(props) {
       data-position={position}
       onTap={onTap}
     >
-    <img src={image} alt={alt} />
+    <img src={image} alt={alt} type='image/webp'/>
       <div className='website-blur'></div>
       <p className='website-title'>{title}</p>
     </motion.li>
