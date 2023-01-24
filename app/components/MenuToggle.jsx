@@ -11,7 +11,12 @@ const Path = (props) => (
 )
 
 export const MenuToggle = ({ toggle }) => (
-  <button onClick={toggle} className='burger'>
+  <button
+    onClick={toggle}
+    className='burger'
+    id='burger'
+    aria-label='nav mobile button'
+  >
     <svg
       width='23'
       height='23'

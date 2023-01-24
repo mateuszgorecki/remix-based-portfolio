@@ -3,6 +3,7 @@ import styles from '~/styles/ContactPage.css'
 import photo from '../../public/small-portrait.webp'
 import { Form } from '@remix-run/react'
 import { motion } from 'framer-motion'
+import { redirect } from '@remix-run/server-runtime'
 
 export async function loader() {
   return null
@@ -11,17 +12,14 @@ export async function action({ request }) {
   const formData = await request.formData()
   const name = formData.get('name')
   const baseUrl = request.url
-  const response = await fetch(`${baseUrl}`, {
+  await fetch(`${baseUrl}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-  body: {
-    name: name,
-  }
+    body: `name=${name}$form-name=contact`,
   })
-  console.log(response)
-  return null
+  return redirect('/contact')
 }
 
 export default function ContactPage() {
@@ -55,18 +53,20 @@ export default function ContactPage() {
             // action='/contact'
             method='post'
             data-netlify='true'
+            value='contact'
             // netlify-honeypot='bot-field'
           >
             <div>
-              {/* <input
+              <input
                 hidden
                 name='bot-field'
                 placeholder='don"t fill if you are human'
-              /> */}
+              />
               <input
                 type='text'
                 placeholder='your name'
-                name='name'              />
+                name='name'
+              />
               <input
                 type='email'
                 placeholder='your mail'
