@@ -134,6 +134,7 @@ h1, p {
   bottom: 0;
   width: 400px;
   backdrop-filter: blur(20px);
+  display: none;
 }
 
 @media screen and (min-width: 1921px) {
@@ -143,7 +144,7 @@ h1, p {
   }
 }
 @media screen and (max-width: 1280px) {
-  .burger {
+  .burger, .background {
     display: block;
   }
 }
