@@ -1,6 +1,6 @@
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/AboutPage.css'
-import photo from '../../public/small-portrait.png'
+import photo from '../../public/small-portrait.webp'
 export default function AboutPage() {
   return (
 

@@ -1,5 +1,5 @@
-import madbitPhoto from '../../public/ScreenShot-madbit.png'
-import corelabPhoto from '../../public/ScreenShot-corelab.png'
+import madbitPhoto from '../../public/ScreenShot-madbit.webp'
+import corelabPhoto from '../../public/ScreenShot-corelab.webp'
 
 export const DUMMY_WEBSITES = [
   {

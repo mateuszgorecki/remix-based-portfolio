@@ -76,6 +76,7 @@ export default function MainNavigation(props) {
             target='_blank'
             href='https://github.com/mateuszgorecki'
             onClick={closeNav}
+            aria-label='My GitHub'
           >
             <svg
               width='33'
@@ -96,6 +97,7 @@ export default function MainNavigation(props) {
             rel='noreferrer'
             href='https://www.facebook.com/Goreczky/'
             onClick={closeNav}
+            aria-label='My Facebook'
           >
             <svg
               width='33'

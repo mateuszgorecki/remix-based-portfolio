@@ -1,6 +1,6 @@
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/ContactPage.css'
-import photo from '../../public/small-portrait.png'
+import photo from '../../public/small-portrait.webp'
 import { Form } from '@remix-run/react'
 import { motion } from 'framer-motion'
 
