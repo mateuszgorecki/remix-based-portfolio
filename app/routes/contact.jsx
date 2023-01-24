@@ -1,7 +1,7 @@
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/ContactPage.css'
 import photo from '../../public/small-portrait.webp'
-// import { Form } from '@remix-run/react'
+import { Form } from '@remix-run/react'
 import { motion } from 'framer-motion'
 import { redirect } from '@remix-run/server-runtime'
 
@@ -22,7 +22,7 @@ export async function action({ request }) {
     },
     body: `name=${name}&email=${email}&message=${message}&form-name=contact`,
   })
-  return redirect('/contact')
+  return null
 }
 
 export default function ContactPage() {
@@ -52,8 +52,8 @@ export default function ContactPage() {
           , or by contact form below.
         </p>
         <div className='contact-info-wrapper'>
-          <form
-            action='/contact/?index'
+          <Form
+            action='/contact'
             method='post'
             value='contact'
           >
@@ -91,7 +91,7 @@ export default function ContactPage() {
             >
               SEND
             </motion.button>
-          </form>
+          </Form>
         </div>
       </div>
     </PageWrapper>
