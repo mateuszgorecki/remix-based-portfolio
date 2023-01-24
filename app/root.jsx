@@ -26,10 +26,12 @@ export const meta = () => ({
   viewport: 'width=device-width,initial-scale=1',
 })
 
+const isBrowser = typeof window !== 'undefined' ? true : false
+
 const sidebar = {
   open: () => ({
     clipPath: `circle(${
-      typeof window !== 'undefined' ? window.innerHeight : 1000
+      isBrowser ? window.innerHeight : 1000
     }px at 350px 50px)`,
     transition: {
       type: 'spring',
@@ -37,6 +39,7 @@ const sidebar = {
       restDelta: 2,
     },
   }),
+
   closed: {
     clipPath: 'circle(30px at 350px 50px)',
     transition: {
@@ -44,6 +47,18 @@ const sidebar = {
       type: 'spring',
       stiffness: 400,
       damping: 40,
+    },
+  },
+}
+
+const variants = {
+  open: {
+    zIndex: 10,
+  },
+  closed: {
+    zIndex: -10,
+    transition: {
+      delay: 0.5,
     },
   },
 }
@@ -58,7 +73,7 @@ export default function App() {
   }, [location])
 
   const [isOpen, toggleOpen] = useState(
-    typeof window !== 'undefined' && window.innerWidth <= 1280 ? false : true
+    isBrowser && window.innerWidth <= 1280 ? false : true
   )
 
   return (
@@ -68,11 +83,12 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <header>
-          <motion.nav
-            initial={false}
-            animate={isOpen ? 'open' : 'closed'}
-          >
+        <motion.header
+          initial={false}
+          animate={isOpen ? 'open' : 'closed'}
+          variants={variants}
+        >
+          <motion.nav>
             <motion.div
               className='background'
               variants={sidebar}
@@ -80,13 +96,19 @@ export default function App() {
             <MainNavigation
               isOpen={isOpen}
               toggleOpen={toggleOpen}
+              isBrowser={isBrowser}
             />
-            <MenuToggle toggle={() => toggleOpen((prev) => !prev)} />
           </motion.nav>
-        </header>
+        </motion.header>
+        <motion.div
+          initial={false}
+          animate={isOpen ? 'open' : 'closed'}
+        >
+          <MenuToggle toggle={() => toggleOpen((prev) => !prev)} />
+        </motion.div>
         <main
           onClick={() =>
-            typeof window !== 'undefined' && window.innerWidth <= 1280 && isOpen
+            isBrowser && window.innerWidth <= 1280 && isOpen
               ? toggleOpen(false)
               : null
           }

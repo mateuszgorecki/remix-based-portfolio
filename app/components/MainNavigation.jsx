@@ -13,7 +13,6 @@ const itemVariants = {
   open: {
     y: 0,
     opacity: 1,
-    zIndex: 10,
     transition: {
       y: { stiffness: 500, velocity: -100 },
     },
@@ -21,7 +20,6 @@ const itemVariants = {
   closed: {
     y: 50,
     opacity: 0,
-    zIndex: -10,
     transition: {
       y: { stiffness: 500 },
     },
@@ -29,7 +27,7 @@ const itemVariants = {
 }
 export default function MainNavigation(props) {
   const closeNav = () => {
-    if(typeof window !== 'undefined' && window.innerWidth <= 1280) {
+    if (props.isBrowser && window.innerWidth <= 1280) {
       props.toggleOpen()
     }
   }
@@ -46,13 +44,28 @@ export default function MainNavigation(props) {
           </NavLink>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <NavLink to='/about' onClick={closeNav}>about</NavLink>
+          <NavLink
+            to='/about'
+            onClick={closeNav}
+          >
+            about
+          </NavLink>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <NavLink to='/portfolio' onClick={closeNav}>portfolio</NavLink>
+          <NavLink
+            to='/portfolio'
+            onClick={closeNav}
+          >
+            portfolio
+          </NavLink>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <NavLink to='/contact' onClick={closeNav}>contact</NavLink>
+          <NavLink
+            to='/contact'
+            onClick={closeNav}
+          >
+            contact
+          </NavLink>
         </motion.li>
         <motion.li
           variants={itemVariants}

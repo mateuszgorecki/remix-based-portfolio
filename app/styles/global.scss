@@ -77,6 +77,32 @@ h1, p {
   }
 }
 
+.burger {
+  display: none;
+  outline: none;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 28px;
+    right: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    z-index: 10;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  backdrop-filter: blur(20px);
+}
 
 @media screen and (min-width: 1921px)   {
   .bg-shape {
@@ -96,6 +122,9 @@ h1, p {
 }
 
 @media screen and (max-width: 1280px) {
+  .burger {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1120px) {
