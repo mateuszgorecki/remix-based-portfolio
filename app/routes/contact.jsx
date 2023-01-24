@@ -6,18 +6,25 @@ import { motion } from 'framer-motion'
 import { redirect } from '@remix-run/server-runtime'
 
 export async function loader() {
-  return null
+  return <div>Loading...</div>
 }
 export async function action({ request }) {
   const formData = await request.formData()
   const name = formData.get('name')
+  const email = formData.get('email')
+  const message = formData.get('message')
   const baseUrl = request.url
   await fetch(`${baseUrl}/form`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: `name=${name}$form-name=contact`,
+    body: {
+      name,
+      email,
+      message,
+      'form-name': 'contact,',
+    },
   })
   return redirect('/contact')
 }
@@ -49,7 +56,7 @@ export default function ContactPage() {
           , or by contact form below.
         </p>
         <div className='contact-info-wrapper'>
-          <Form
+          <form
             action='/contact/?index'
             method='post'
             data-netlify='true'
@@ -92,7 +99,7 @@ export default function ContactPage() {
             >
               SEND
             </motion.button>
-          </Form>
+          </form>
         </div>
       </div>
     </PageWrapper>
