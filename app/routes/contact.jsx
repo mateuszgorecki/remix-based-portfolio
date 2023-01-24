@@ -4,6 +4,26 @@ import photo from '../../public/small-portrait.png'
 import { Form } from '@remix-run/react'
 import { motion } from 'framer-motion'
 
+export async function loader() {
+  return null
+}
+export async function action({ request }) {
+  const formData = await request.formData()
+  const name = formData.get('name')
+  const baseUrl = request.url
+  const response = await fetch(`${baseUrl}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  body: {
+    name: name,
+  }
+  })
+  console.log(response)
+  return null
+}
+
 export default function ContactPage() {
   // const validateValue = (inputType) => {
   //   if (inputType === 'text') {
@@ -12,7 +32,6 @@ export default function ContactPage() {
   //     valueIsValid = /\S+@\S+\.\S+/.test(inputType)
   //   }
   // }
-  const onSubmitHandler = () => {}
 
   return (
     <PageWrapper className='wrapper'>
@@ -25,16 +44,29 @@ export default function ContactPage() {
       <div className='right'>
         <h1>Contact</h1>
         <p>
-          Contact me via: <a href='mailto:mateusz.gorecki.dev@gmail.com'>mateusz.gorecki.dev@gmail.com</a>
+          Contact me via:{' '}
+          <a href='mailto:mateusz.gorecki.dev@gmail.com'>
+            mateusz.gorecki.dev@gmail.com
+          </a>
           , or by contact form below.
         </p>
         <div className='contact-info-wrapper'>
-          <Form onSubmit={onSubmitHandler}>
+          <Form
+            // action='/contact'
+            method='post'
+            // data-netlify='true'
+            // netlify-honeypot='bot-field'
+          >
             <div>
+              {/* <input
+                hidden
+                name='bot-field'
+                placeholder='don"t fill if you are human'
+              /> */}
               <input
                 type='text'
                 placeholder='your name'
-              />
+                name='name'              />
               <input
                 type='email'
                 placeholder='your mail'
@@ -46,6 +78,7 @@ export default function ContactPage() {
               />
             </div>
             <motion.button
+              // disabled
               type='submit'
               whileHover={{
                 scale: 1.1,
