@@ -70,6 +70,7 @@ export default function ContactPage() {
               <input
                 type='email'
                 placeholder='your mail'
+                name='email'
               />
               <textarea
                 name='message'
