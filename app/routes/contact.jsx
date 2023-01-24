@@ -8,7 +8,7 @@ import { redirect } from '@remix-run/server-runtime'
 export async function loader() {
   return <div>Loading...</div>
 }
-export async function action(request) {
+export async function action({ request }) {
   const formData = await request.formData()
   const name = formData.get('name')
   const email = formData.get('email')
