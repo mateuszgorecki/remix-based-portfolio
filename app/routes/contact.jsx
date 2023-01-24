@@ -1,14 +1,14 @@
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/ContactPage.css'
 import photo from '../../public/small-portrait.webp'
-import { Form } from '@remix-run/react'
+// import { Form } from '@remix-run/react'
 import { motion } from 'framer-motion'
 import { redirect } from '@remix-run/server-runtime'
 
 export async function loader() {
   return <div>Loading...</div>
 }
-export async function action({ request }) {
+export async function action(request) {
   const formData = await request.formData()
   const name = formData.get('name')
   const email = formData.get('email')
@@ -26,6 +26,7 @@ export async function action({ request }) {
       'form-name': 'contact,',
     },
   })
+  console.log(baseUrl)
   return redirect('/contact')
 }
 
@@ -79,7 +80,6 @@ export default function ContactPage() {
               />
             </div>
             <motion.button
-              // disabled
               type='submit'
               whileHover={{
                 scale: 1.1,
