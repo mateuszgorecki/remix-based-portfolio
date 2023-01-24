@@ -22,7 +22,7 @@ export async function action({ request }) {
     },
     body: `name=${name}&email=${email}&message=${message}&form-name=contact`,
   })
-  return null
+  return redirect('/contact')
 }
 
 export default function ContactPage() {
