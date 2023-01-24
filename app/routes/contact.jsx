@@ -54,7 +54,7 @@ export default function ContactPage() {
           <Form
             // action='/contact'
             method='post'
-            // data-netlify='true'
+            data-netlify='true'
             // netlify-honeypot='bot-field'
           >
             <div>
