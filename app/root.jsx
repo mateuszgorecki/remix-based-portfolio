@@ -132,12 +132,12 @@ export default function App() {
         </footer>
         <div className='bg-shape-wrapper'>
           <motion.div
-            animate={{ rotate: 360 }}
-            transition={{
-              repeat: Infinity,
-              duration: 120,
-              ease: 'linear',
-            }}
+            // animate={{ rotate: 360 }}
+            // transition={{
+            //   repeat: Infinity,
+            //   duration: 120,
+            //   ease: 'linear',
+            // }}
           >
             <img
               className='bg-shape'
