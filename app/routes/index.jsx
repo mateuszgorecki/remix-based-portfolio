@@ -57,7 +57,7 @@ export default function Index() {
           because it offers server-side rendering by default and hence -
           better SEO. Also I used there SCSS for styling and Framer Motion
           library for animations. Website is hosted on Netlify and you can check
-          the source code on my GitHub. Link to GitHub and other socials below.
+          the source code on my GitHub. Link to GitHub and other socials below. Currently website is under construction.
         </p>
         <div
           className='socials-card-wrapper'

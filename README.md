@@ -7,5 +7,7 @@ You can check the website there: [mateusz-gorecki.dev](https://mateusz-gorecki.d
 
 - Remix
 - JavaScript
-- SCSS 
-- Framer Motion 
+- SCSS
+- Framer Motion
+
+**Currently website is under construction.**
