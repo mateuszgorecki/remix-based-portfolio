@@ -13,7 +13,7 @@ export default function AboutPage() {
       </div>
       <div className='right'>
         <h1>About me</h1>
-        <p>Przypomniał sobie, że gdyby butami? Zaszła mówił i może się dźwigni małego pilotażu, zbiorników, z wysoka docierały tu a kończąc na tytoniu do żucia i fotografiach by odłożył, a za resztę musiałby to być się i głową naprzód go też Może kłamie!</p>
+        <p>My name is Matthew and I enjoy creating websites. Currently I mastering my skills at React, but before that I try many different approaches making websites. From plain HTML & CSS, through page builders like Elementor/ Oxygen/ Divi (I know, it's theme) ending with custom themes on Wordpress (Sage Roots) using HTML, SCSS, JavaScript and PHP.</p>
         <div className='stats-wrapper'>
           <ul>
             <li>

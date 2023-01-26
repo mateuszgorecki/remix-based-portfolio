@@ -49,8 +49,9 @@
 .wrapper .right .website-info-wrapper {
   height: fit-content;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 1vw 0 0;
+  gap: 2vw;
 }
 .wrapper .right .website-info-photo {
   height: calc(var(--website-height) * 1.2);
@@ -68,7 +69,7 @@
   cursor: pointer;
 }
 .wrapper .right .website-info-data {
-  width: 350px;
+  width: 450px;
   height: calc(var(--website-height) * 1.2);
   max-height: 30vw;
   display: flex;
@@ -94,13 +95,9 @@
   .wrapper .right > p {
     margin: 2rem 0 5rem;
   }
-  .wrapper .right .website-info-wrapper {
-    gap: 2rem;
-    justify-content: flex-start;
-  }
   .wrapper .right .website-info-data {
     gap: 2rem;
-    width: 450px;
+    width: 500px;
   }
   .wrapper .right .website-info-data p {
     font-size: 1.2rem;

@@ -18,8 +18,9 @@
       &-wrapper {
         height: fit-content;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin: 1vw 0 0;
+        gap: 2vw;
       }
 
       &-photo {
@@ -41,7 +42,7 @@
       }
 
       &-data {
-        width: 350px;
+        width: 450px;
         height: calc(var(--website-height) * 1.2);
         max-height: 30vw;
         display: flex;
@@ -81,14 +82,9 @@
         margin: 2rem 0 5rem;
       }
       .website-info {
-        &-wrapper {
-          gap: 2rem;
-          justify-content: flex-start;
-        }
-
         &-data {
           gap: 2rem;
-          width: 450px;
+          width: 500px;
 
           p {
             font-size: 1.2rem;

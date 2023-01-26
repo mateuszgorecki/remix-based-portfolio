@@ -22,7 +22,8 @@ import { MenuToggle } from './components/MenuToggle'
 
 export const meta = () => ({
   charset: 'utf-8',
-  title: 'Portfolio',
+  title: 'Mateusz Górecki',
+  description: 'Mateusz Górecki. Frontend Developer from Poland. This website is home for my projects.',
   viewport: 'width=device-width,initial-scale=1',
 })
 

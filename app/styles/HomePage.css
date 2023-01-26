@@ -37,12 +37,15 @@
     --modal-width: 900px;
   }
 }
+.wrapper .right > p:first-of-type {
+  margin: 30px 0 0;
+}
 .wrapper .right .socials-card-wrapper {
   width: fit-content;
   display: flex;
   position: relative;
   cursor: pointer;
-  margin: 20px 0 0;
+  margin: 40px 0 0;
   align-self: center;
 }
 .wrapper .right .socials-card-wrapper[data-ison=true] {

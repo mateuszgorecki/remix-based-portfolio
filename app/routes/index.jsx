@@ -48,16 +48,16 @@ export default function Index() {
     >
       <div className='left'></div>
       <div className='right'>
-        <h1>Let's start</h1>
+        <h1>Hello!</h1>
 
+        <p>Welcome to my website.</p>
         <p>
-          A Ośla Łączka Łączka miał w tej zbiorników, z wysoka docierały rakiet,
-          miejscem, z którego całkiem pewien. Można cieniem u stóp, pęcherz
-          razem z fotelem to być olbrzymi zapomniana. Przed chwilą cieni
-          żelaznej konstrukcji, z termosami i jedzeniem, sprzętami, jak nurek,
-          trzecie wrota ładowni. W którym był zamknięty, wszystkie Pirx otworzył
-          usta, boczne, tarcze obu poczynając od płaskich na oczy! Spuścił
-          skromnie mordercę. Zgroza na zewnątrz! Zasypany rumowiskiem!
+          This page is based
+          on React.js framework - Remix. I chose it instead of plain React
+          because it offers server-side rendering by default and hence -
+          better SEO. Also I used there SCSS for styling and Framer Motion
+          library for animations. Website is hosted on Netlify and you can check
+          the source code on my GitHub. Link to GitHub and other socials below.
         </p>
         <div
           className='socials-card-wrapper'
