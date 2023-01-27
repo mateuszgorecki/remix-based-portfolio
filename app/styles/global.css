@@ -163,5 +163,13 @@ p {
     display: none;
   }
 }
+@media screen and (max-width: 768px) {
+  .bg-photo {
+    max-width: 100vw;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 
 /*# sourceMappingURL=global.css.map */

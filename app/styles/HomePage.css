@@ -81,5 +81,13 @@
     margin: 2vw 0 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .wrapper .right .socials-card-wrapper {
+    margin: 40px 0;
+  }
+  .wrapper .right .socials-card-wrapper[data-ison=true] {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=HomePage.css.map */
