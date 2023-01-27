@@ -66,7 +66,7 @@
   overflow-y: scroll;
   object-position: 0 0;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+  animation: autoScroll 30s infinite 1.5s ease-in-out;
 }
 .wrapper .right .website-info-data {
   width: 450px;
@@ -80,11 +80,25 @@
 .wrapper .right .website-info-data p {
   font-size: 1rem;
 }
+.wrapper .right .website-info-data p:first-child {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 .wrapper .right .website-info-description {
   width: auto;
 }
 .wrapper .right .website-info-technologies p {
   width: auto;
+}
+.wrapper .right .website-info-url {
+  display: flex;
+  gap: 0.5rem;
+}
+.wrapper .right .website-info-url a {
+  transition: all 0.2s ease-out;
+}
+.wrapper .right .website-info-url a:hover {
+  color: #aa00ff;
 }
 
 @media screen and (min-width: 1921px) {

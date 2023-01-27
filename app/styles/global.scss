@@ -35,11 +35,11 @@ footer {
   padding: 1rem 0;
   display: flex;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   align-items: center;
 
   a {
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     text-decoration: none;
     font-weight: bold;
 
@@ -49,18 +49,17 @@ footer {
   }
 }
 
-h1, p {
+h1,
+p {
   cursor: default;
 }
 
-.bg-shape {
-  &-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translateY(-50%);
-    z-index: -1;
-  }
+.bg-shape-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
 .bg-photo {
@@ -70,7 +69,7 @@ h1, p {
   height: 100vh;
   z-index: -1;
   filter: blur(0);
-  transition: all 0.2s ease-in-out;;
+  transition: all 0.2s ease-in-out;
 
   &[data-ishome='false'] {
     filter: blur(10px);
@@ -80,19 +79,19 @@ h1, p {
 .burger {
   display: none;
   outline: none;
-    border: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    cursor: pointer;
-    position: absolute;
-    top: 28px;
-    right: 24px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: transparent;
-    z-index: 10;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 10;
 }
 
 .background {
@@ -105,7 +104,7 @@ h1, p {
   display: none;
 }
 
-@media screen and (min-width: 1921px)   {
+@media screen and (min-width: 1921px) {
   .bg-shape {
     &-wrapper {
       left: 47%;
@@ -115,31 +114,26 @@ h1, p {
 }
 
 @media screen and (max-width: 1850px) {
-
 }
 
 @media screen and (max-width: 1440px) {
-
 }
 
 @media screen and (max-width: 1280px) {
-  .burger, .background {
+  .burger,
+  .background {
     display: block;
   }
 }
 
 @media screen and (max-width: 1120px) {
-
 }
 
 @media screen and (max-width: 992px) {
-
 }
 
 @media screen and (max-width: 768px) {
-
 }
 
 @media screen and (max-width: 576px) {
-
 }

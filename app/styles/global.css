@@ -84,7 +84,8 @@ footer a:hover {
   color: #aa00ff;
 }
 
-h1, p {
+h1,
+p {
   cursor: default;
 }
 
@@ -144,7 +145,8 @@ h1, p {
   }
 }
 @media screen and (max-width: 1280px) {
-  .burger, .background {
+  .burger,
+  .background {
     display: block;
   }
 }

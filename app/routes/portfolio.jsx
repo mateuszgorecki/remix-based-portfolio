@@ -4,10 +4,10 @@ import { DUMMY_WEBSITES } from '~/components/websites-data'
 import WebsiteWrapper, {
   links as WebsiteWrapperStyles,
 } from '~/components/WebsiteWrapper'
-import WebsiteModal, { links as ModalStyles } from '~/components/WebsiteModal'
+import { links as ModalStyles } from '~/components/WebsiteModal'
 
-import { motion, AnimatePresence, useScroll } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export default function PortfolioPage() {
   const initialState = {
@@ -15,19 +15,21 @@ export default function PortfolioPage() {
     technologies: '',
     image: '',
     alt: '',
+    url: '',
   }
 
   const [websiteInfo, setWebsiteInfo] = useState(initialState)
-  const [openWebsite, setOpenWebsite] = useState(false)
 
   const onTap = (event, info) => {
     if (event) {
       newWebsites.push(newWebsites.splice(0, 1)[0])
       setWebsiteInfo({
+        title: newWebsites[0].props.title,
         description: newWebsites[0].props.description,
         technologies: newWebsites[0].props.technologies,
         image: newWebsites[0].props.image,
         alt: newWebsites[0].props.alt,
+        url: newWebsites[0].props.url,
       })
       setWebsitesList(() => [newWebsites])
     }
@@ -48,6 +50,7 @@ export default function PortfolioPage() {
             description={website.description}
             image={website.image}
             alt={website.alt}
+            url={website.url}
             position={counter}
             onTap={onTap}
           />
@@ -60,16 +63,14 @@ export default function PortfolioPage() {
 
   useEffect(() => {
     setWebsiteInfo({
+      title: newWebsites[0].props.title,
       description: websitesList[0].props.description,
       technologies: websitesList[0].props.technologies,
       image: websitesList[0].props.image,
       alt: websitesList[0].props.alt,
+      url: newWebsites[0].props.url,
     })
   }, [])
-
-  const openWebsiteHandler = () => {
-    setOpenWebsite((state) => !state)
-  }
 
   return (
     <PageWrapper className='wrapper'>
@@ -87,38 +88,37 @@ export default function PortfolioPage() {
         <h1>Portfolio</h1>
         <div className='website-info-wrapper'>
           <div className='website-info-photo'>
-            <AnimatePresence>
-              <motion.img
-                layoutId='image'
-                className='info-photo'
-                src={websiteInfo.image}
-                alt={websiteInfo.alt}
-                onClick={openWebsiteHandler}
-              />
-            </AnimatePresence>
+            <img
+              className='info-photo'
+              src={websiteInfo.image}
+              alt={websiteInfo.alt}
+            />
           </div>
           <div className='website-info-data'>
-            <AnimatePresence mode='wait'>
-              <motion.p
-                className='website-info-description'
-                key={Math.random()}
-                start={{
-                  opacity: 0.5,
-                }}
-                animate={{
-                  opacity: 1,
-                }}
-                exit={{
-                  opacity: 0.5,
-                }}
-                transition={{
-                  ease: 'easeInOut',
-                  duration: 0.3,
-                }}
-              >
-                {websiteInfo.description}
-              </motion.p>
-            </AnimatePresence>
+            <div className='website-info-description'>
+              <p>Description:</p>
+              <AnimatePresence mode='wait'>
+                <motion.p
+                  className='website-info-description'
+                  key={Math.random()}
+                  start={{
+                    opacity: 0.5,
+                  }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  exit={{
+                    opacity: 0.5,
+                  }}
+                  transition={{
+                    ease: 'easeInOut',
+                    duration: 0.3,
+                  }}
+                >
+                  {websiteInfo.description}
+                </motion.p>
+              </AnimatePresence>
+            </div>
             <div className='website-info-technologies'>
               <p>Technologies:</p>
               <AnimatePresence mode='wait'>
@@ -142,19 +142,34 @@ export default function PortfolioPage() {
                 </motion.p>
               </AnimatePresence>
             </div>
+            <div className='website-info-url'>
+              <p>Url:</p>
+              <AnimatePresence mode='wait'>
+                <motion.a
+                  key={Math.random()}
+                  start={{
+                    opacity: 0.5,
+                  }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  exit={{
+                    opacity: 0.5,
+                  }}
+                  transition={{
+                    ease: 'easeInOut',
+                    duration: 0.3,
+                  }}
+                  href={websiteInfo.url}
+                  target='_blank'
+                >
+                  {websiteInfo.title}
+                </motion.a>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>
-      <AnimatePresence>
-        {openWebsite && (
-          <WebsiteModal
-            onClick={openWebsiteHandler}
-            src={websiteInfo.image}
-            alt={websiteInfo.alt}
-            state={openWebsite}
-          />
-        )}
-      </AnimatePresence>
     </PageWrapper>
   )
 }

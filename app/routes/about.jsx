@@ -13,7 +13,7 @@ export default function AboutPage() {
       </div>
       <div className='right'>
         <h1>About me</h1>
-        <p>My name is Matthew and I enjoy creating websites. Currently I mastering my skills at React, but before that I try many different approaches making websites. From plain HTML & CSS, through page builders like Elementor/ Oxygen/ Divi (I know, it's theme) ending with custom themes on Wordpress (Sage Roots) using HTML, SCSS, JavaScript and PHP.</p>
+        <p>My name is Matthew and I enjoy creating websites. Currently I mastering my skills at React, but before that I try many different approaches making websites. From plain HTML & CSS, through page builders like Elementor/ Oxygen/ Divi, ending with custom themes on Wordpress (Sage Roots) using HTML, SCSS, JavaScript and PHP.</p>
         <div className='stats-wrapper'>
           <ul>
             <li>

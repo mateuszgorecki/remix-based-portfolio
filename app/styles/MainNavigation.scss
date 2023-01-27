@@ -1,6 +1,5 @@
 @import './variables';
 
-
 header {
   display: flex;
   justify-content: flex-end;
@@ -73,8 +72,6 @@ header {
       }
     }
   }
-
-
 }
 
 @media screen and (min-width: 1921px) {
@@ -182,8 +179,6 @@ header {
 }
 
 @media screen and (max-width: 1280px) {
-
-
   header {
     justify-content: center;
     align-items: center;
@@ -219,17 +214,6 @@ header {
 
             &::before {
               display: none;
-              // content: '';
-              // width: 22px;
-              // height: 22px;
-              // border-radius: 50%;
-              // position: absolute;
-              // background-color: $pure-white;
-              // top: -22px;
-              // left: 50%;
-              // transform: translateX(-50%);
-              // opacity: 0;
-              // transition: all 0.3s ease-in-out;
             }
 
             &.active {
@@ -249,7 +233,6 @@ header {
               }
             }
           }
-
         }
 
         .socials {
@@ -258,21 +241,80 @@ header {
         }
       }
     }
-
-
   }
 }
 
 @media screen and (max-width: 1120px) {
+  header {
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 5;
+
+    nav {
+      width: fit-content;
+      padding: 0;
+      z-index: 5;
+
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+
+        li {
+          a {
+            text-decoration: none;
+            font-size: 36px;
+            line-height: 51px;
+            color: $white;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+            border: none;
+            outline: none;
+
+            &::before {
+              display: none;
+            }
+
+            &.active {
+              color: $pure-white;
+
+              &::before {
+                opacity: 1;
+              }
+            }
+
+            &:hover {
+              color: $pure-white;
+              svg {
+                path {
+                  fill: $pure-white;
+                }
+              }
+            }
+          }
+        }
+
+        .socials {
+          display: flex;
+          gap: 2rem;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
 }
 
 @media screen and (max-width: 768px) {
-
 }
 
 @media screen and (max-width: 576px) {
-
 }

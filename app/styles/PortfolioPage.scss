@@ -36,8 +36,7 @@
           overflow-y: scroll;
           object-position: 0 0;
           box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-          cursor: pointer;
-          // animation: autoScroll 30s infinite 1.5s ease-in-out;
+          animation: autoScroll 30s infinite 1.5s ease-in-out;
         }
       }
 
@@ -52,6 +51,11 @@
 
         p {
           font-size: 1rem;
+
+          &:first-child {
+            font-weight: 600;
+            letter-spacing: 2px;
+          }
         }
       }
 
@@ -64,11 +68,24 @@
           width: auto;
         }
       }
+
+      &-url {
+        display: flex;
+        gap: 0.5rem;
+
+        a {
+          transition: all 0.2s ease-out;
+
+          &:hover {
+            color: $highlight;
+          }
+        }
+      }
     }
   }
 }
 
-@media screen and (min-width: 1921px)   {
+@media screen and (min-width: 1921px) {
   .wrapper {
     .left {
       .website-carousel-wrapper {
@@ -124,7 +141,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: 1600px) {
   .wrapper {
@@ -214,7 +230,8 @@
   50% {
     object-position: bottom;
   }
-  95%, 100% {
+  95%,
+  100% {
     object-position: top;
   }
 }
