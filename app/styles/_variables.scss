@@ -40,6 +40,8 @@ $highlight: #aa00ff;
   }
 
   @media screen and (max-width: 1120px) {
+    --website-height: 300px;
+    --card-height: 150px;
   }
 
   @media screen and (max-width: 992px) {
@@ -78,6 +80,7 @@ $highlight: #aa00ff;
   }
 
   @media screen and (max-width: 1120px) {
+    font-size: 38px;
   }
 
   @media screen and (max-width: 992px) {
@@ -110,6 +113,8 @@ $highlight: #aa00ff;
   }
 
   @media screen and (max-width: 1120px) {
+    font-size: 16px;
+    letter-spacing: 1px;
   }
 
   @media screen and (max-width: 992px) {

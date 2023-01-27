@@ -37,6 +37,12 @@
     --modal-width: 900px;
   }
 }
+@media screen and (max-width: 1120px) {
+  :root {
+    --website-height: 300px;
+    --card-height: 150px;
+  }
+}
 .wrapper .right > p {
   margin: 1rem 0 2rem;
 }
@@ -111,6 +117,20 @@
 @media screen and (max-width: 1280px) {
   .wrapper .right .contact-info-wrapper form {
     height: 350px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .wrapper .right .contact-info-wrapper form {
+    height: 320px;
+    gap: 0.8rem;
+  }
+  .wrapper .right .contact-info-wrapper form input,
+  .wrapper .right .contact-info-wrapper form textarea {
+    padding: 12px;
+    letter-spacing: 1px;
+  }
+  .wrapper .right .contact-info-wrapper form button {
+    font-size: 25px;
   }
 }
 @media screen and (min-width: 1921px) {

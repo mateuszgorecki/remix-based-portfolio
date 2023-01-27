@@ -109,6 +109,27 @@
 }
 
 @media screen and (max-width: 1120px) {
+  .wrapper {
+    .right {
+
+      .contact-info-wrapper {
+        form {
+          height: 320px;
+          gap: 0.8rem;
+
+          input,
+          textarea {
+            padding: 12px;
+            letter-spacing: 1px;
+          }
+
+          button {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {

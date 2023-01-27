@@ -129,6 +129,23 @@
 }
 
 @media screen and (max-width: 1120px) {
+  .website {
+    &-wrapper {
+      border-radius: 20px;
+
+      &:nth-child(1) {
+        transform: translate(80px, 80px);
+      }
+
+      &:nth-child(2) {
+        transform: translate(40px, 40px);
+      }
+    }
+
+    &-blur {
+      border-radius: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {

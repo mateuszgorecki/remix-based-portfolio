@@ -37,6 +37,12 @@
     --modal-width: 900px;
   }
 }
+@media screen and (max-width: 1120px) {
+  :root {
+    --website-height: 300px;
+    --card-height: 150px;
+  }
+}
 .motion-card-wrapper {
   margin: 0 0 0 calc(var(--card-margin) - var(--card-margin) * 2);
 }
@@ -145,6 +151,15 @@
   .motion-card-wrapper img {
     width: 2.8rem;
     height: 2.8rem;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .motion-card-wrapper .card-wrapper {
+    border-radius: 15px;
+  }
+  .motion-card-wrapper img {
+    width: 2rem;
+    height: 2rem;
   }
 }
 

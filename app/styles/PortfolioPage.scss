@@ -212,6 +212,30 @@
 }
 
 @media screen and (max-width: 1120px) {
+  .wrapper {
+    .left {
+      .website-carousel-wrapper {
+        top: 9%;
+        left: 10%;
+      }
+    }
+
+    .right {
+      .website-info {
+        &-photo {
+          max-height: 35vw;
+
+          .info-photo {
+            border-radius: 20px;
+          }
+        }
+
+        &-data {
+          max-height: 35vw;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {

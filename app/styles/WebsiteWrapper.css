@@ -37,6 +37,12 @@
     --modal-width: 900px;
   }
 }
+@media screen and (max-width: 1120px) {
+  :root {
+    --website-height: 300px;
+    --card-height: 150px;
+  }
+}
 .website-wrapper {
   position: absolute;
   display: flex;
@@ -133,6 +139,20 @@
   }
   .website-title {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .website-wrapper {
+    border-radius: 20px;
+  }
+  .website-wrapper:nth-child(1) {
+    transform: translate(80px, 80px);
+  }
+  .website-wrapper:nth-child(2) {
+    transform: translate(40px, 40px);
+  }
+  .website-blur {
+    border-radius: 20px;
   }
 }
 

@@ -37,6 +37,12 @@
     --modal-width: 900px;
   }
 }
+@media screen and (max-width: 1120px) {
+  :root {
+    --website-height: 300px;
+    --card-height: 150px;
+  }
+}
 .wrapper .left .website-carousel-wrapper {
   top: -8%;
   left: 4%;
@@ -161,6 +167,21 @@
   }
 }
 @media screen and (max-width: 1280px) {
+  .wrapper .left .website-carousel-wrapper {
+    top: 9%;
+    left: 10%;
+  }
+  .wrapper .right .website-info-photo {
+    max-height: 35vw;
+  }
+  .wrapper .right .website-info-photo .info-photo {
+    border-radius: 20px;
+  }
+  .wrapper .right .website-info-data {
+    max-height: 35vw;
+  }
+}
+@media screen and (max-width: 1120px) {
   .wrapper .left .website-carousel-wrapper {
     top: 9%;
     left: 10%;

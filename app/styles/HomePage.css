@@ -37,6 +37,12 @@
     --modal-width: 900px;
   }
 }
+@media screen and (max-width: 1120px) {
+  :root {
+    --website-height: 300px;
+    --card-height: 150px;
+  }
+}
 .wrapper .right .socials-card-wrapper {
   width: fit-content;
   display: flex;
