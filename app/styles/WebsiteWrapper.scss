@@ -90,6 +90,10 @@
       border-radius: 30px;
       transform: translate(0, 0);
 
+      img {
+        border-radius: 30px;
+      }
+
       &:nth-child(1) {
         transform: translate(120px, 120px);
       }
@@ -116,6 +120,10 @@
   .website {
     &-wrapper {
       border-radius: 20px;
+
+      img {
+        border-radius: 20px;
+      }
     }
 
     &-blur {
@@ -131,7 +139,6 @@
 @media screen and (max-width: 1120px) {
   .website {
     &-wrapper {
-      border-radius: 20px;
 
       &:nth-child(1) {
         transform: translate(80px, 80px);
@@ -140,10 +147,6 @@
       &:nth-child(2) {
         transform: translate(40px, 40px);
       }
-    }
-
-    &-blur {
-      border-radius: 20px;
     }
   }
 }

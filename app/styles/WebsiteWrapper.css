@@ -107,6 +107,9 @@
     border-radius: 30px;
     transform: translate(0, 0);
   }
+  .website-wrapper img {
+    border-radius: 30px;
+  }
   .website-wrapper:nth-child(1) {
     transform: translate(120px, 120px);
   }
@@ -124,6 +127,9 @@
   .website-wrapper {
     border-radius: 20px;
   }
+  .website-wrapper img {
+    border-radius: 20px;
+  }
   .website-blur {
     border-radius: 20px;
   }
@@ -132,17 +138,11 @@
   }
 }
 @media screen and (max-width: 1120px) {
-  .website-wrapper {
-    border-radius: 20px;
-  }
   .website-wrapper:nth-child(1) {
     transform: translate(80px, 80px);
   }
   .website-wrapper:nth-child(2) {
     transform: translate(40px, 40px);
-  }
-  .website-blur {
-    border-radius: 20px;
   }
 }
 
