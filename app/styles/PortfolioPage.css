@@ -216,6 +216,9 @@
     width: 100%;
     height: 130vw;
   }
+  .wrapper .right .website-info-photo .info-photo {
+    animation: none;
+  }
   .wrapper .right .website-info-data {
     width: 100%;
     justify-content: flex-start;

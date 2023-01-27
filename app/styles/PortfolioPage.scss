@@ -284,6 +284,10 @@
         &-photo {
           width: 100%;
           height: 130vw;
+
+          .info-photo {
+            animation: none;
+          }
         }
 
         &-data {
@@ -291,29 +295,6 @@
           justify-content: flex-start;
           height: fit-content;
         }
-
-        // &-description {
-        //   width: auto;
-        // }
-
-        // &-technologies {
-        //   p {
-        //     width: auto;
-        //   }
-        // }
-
-        // &-url {
-        //   display: flex;
-        //   gap: 0.5rem;
-
-        //   a {
-        //     transition: all 0.2s ease-out;
-
-        //     &:hover {
-        //       color: $highlight;
-        //     }
-        //   }
-        // }
       }
     }
   }
