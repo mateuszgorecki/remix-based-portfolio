@@ -5,8 +5,6 @@
   --card-margin: calc(var(--card-width) / 2);
   --website-height: 500px;
   --website-width: calc(var(--website-height) / 1.5);
-  --modal-width: 1500px;
-  --modal-height: calc(var(--modal-width) / 1.78);
 }
 @media screen and (min-width: 1921px) {
   :root {
@@ -18,24 +16,16 @@
 @media screen and (max-width: 1850px) {
   :root {
     --website-height: clamp(400px, 25vw, 480px);
-    --modal-width: 1250px;
   }
 }
 @media screen and (max-width: 1600px) {
   :root {
     --card-height: 180px;
-    --modal-width: 1100px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  :root {
-    --modal-width: 1000px;
   }
 }
 @media screen and (max-width: 1280px) {
   :root {
     --website-height: 350px;
-    --modal-width: 900px;
   }
 }
 @media screen and (max-width: 1120px) {
@@ -142,6 +132,7 @@ p {
   width: 400px;
   backdrop-filter: blur(20px);
   display: none;
+  background-color: rgba(9, 8, 13, 0.7);
 }
 
 @media screen and (min-width: 1921px) {
@@ -154,6 +145,22 @@ p {
   .burger,
   .background {
     display: block;
+  }
+}
+@media screen and (max-width: 992px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  body {
+    height: fit-content;
+  }
+  .background {
+    width: 100vw;
+  }
+  .bg-shape-wrapper {
+    display: none;
   }
 }
 

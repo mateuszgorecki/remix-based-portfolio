@@ -23,7 +23,8 @@ import { MenuToggle } from './components/MenuToggle'
 export const meta = () => ({
   charset: 'utf-8',
   title: 'Mateusz Górecki',
-  description: 'Mateusz Górecki. Frontend Developer from Poland. This website is home for my projects.',
+  description:
+    'Mateusz Górecki, Frontend Developer from Poland. This website is home for my projects.',
   viewport: 'width=device-width,initial-scale=1',
 })
 
@@ -32,22 +33,22 @@ const isBrowser = typeof window !== 'undefined' ? true : false
 const sidebar = {
   open: () => ({
     clipPath: `circle(${
-      isBrowser ? window.innerHeight : 1000
-    }px at 350px 50px)`,
+      isBrowser ? window.innerHeight * 2 : 1000
+    }px at 95% 50px)`,
     transition: {
       type: 'spring',
-      stiffness: 70,
+      stiffness: 40,
       restDelta: 2,
     },
   }),
 
   closed: {
-    clipPath: 'circle(30px at 350px 50px)',
+    clipPath: `circle(30px at 95% 50px)`,
     transition: {
       delay: 0.4,
       type: 'spring',
       stiffness: 400,
-      damping: 40,
+      damping: 20,
     },
   },
 }
@@ -69,7 +70,10 @@ export default function App() {
   const location = useLocation()
 
   useEffect(() => {
-    if (location.pathname === '/') setIsHome(true)
+    if (isBrowser && window.innerWidth <= 992 && location.pathname === '/')
+      setIsHome(false)
+    else if (isBrowser && window.innerWidth >= 992 && location.pathname === '/')
+      setIsHome(true)
     else setIsHome(false)
   }, [location])
 
@@ -133,12 +137,12 @@ export default function App() {
         </footer>
         <div className='bg-shape-wrapper'>
           <motion.div
-            // animate={{ rotate: 360 }}
-            // transition={{
-            //   repeat: Infinity,
-            //   duration: 120,
-            //   ease: 'linear',
-            // }}
+          // animate={{ rotate: 360 }}
+          // transition={{
+          //   repeat: Infinity,
+          //   duration: 120,
+          //   ease: 'linear',
+          // }}
           >
             <img
               className='bg-shape'

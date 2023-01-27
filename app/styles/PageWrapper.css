@@ -4,8 +4,6 @@
   --card-margin: calc(var(--card-width) / 2);
   --website-height: 500px;
   --website-width: calc(var(--website-height) / 1.5);
-  --modal-width: 1500px;
-  --modal-height: calc(var(--modal-width) / 1.78);
 }
 @media screen and (min-width: 1921px) {
   :root {
@@ -17,24 +15,16 @@
 @media screen and (max-width: 1850px) {
   :root {
     --website-height: clamp(400px, 25vw, 480px);
-    --modal-width: 1250px;
   }
 }
 @media screen and (max-width: 1600px) {
   :root {
     --card-height: 180px;
-    --modal-width: 1100px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  :root {
-    --modal-width: 1000px;
   }
 }
 @media screen and (max-width: 1280px) {
   :root {
     --website-height: 350px;
-    --modal-width: 900px;
   }
 }
 @media screen and (max-width: 1120px) {
@@ -171,6 +161,24 @@
   .page-wrapper .left > img {
     width: 210px;
     transform: translateY(40%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .page-wrapper {
+    flex-direction: column-reverse;
+  }
+  .page-wrapper .left {
+    width: 100%;
+    align-items: center;
+  }
+  .page-wrapper .left > img {
+    transform: none;
+    margin: 30px 0 30px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  }
+  .page-wrapper .right {
+    width: 100%;
+    padding: 40px 50px 0;
   }
 }
 @media screen and (min-width: 1921px) {

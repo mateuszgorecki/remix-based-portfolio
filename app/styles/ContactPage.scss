@@ -133,6 +133,39 @@
 }
 
 @media screen and (max-width: 992px) {
+  .wrapper {
+    .left {
+      img {
+        display: none;
+      }
+    }
+    .right {
+
+      .contact-info-wrapper {
+        form {
+          flex-direction: column;
+          height: fit-content;
+
+          div {
+            justify-content: flex-start;
+            gap: 0.8rem;
+          }
+
+          input,
+          textarea {
+            padding: 12px;
+            letter-spacing: 1px;
+            font-size: 18px;
+            line-height: 130%;
+          }
+
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

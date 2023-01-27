@@ -239,6 +239,34 @@
 }
 
 @media screen and (max-width: 992px) {
+  .wrapper {
+    .left {
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .website-carousel-wrapper {
+        top: 0;
+        left: 0;
+        height: 400px;
+        width: 300px;
+      }
+    }
+
+    .right {
+      .website-info {
+        &-photo {
+          max-height: 400px;
+        }
+        &-data {
+          width: 48vw;
+          max-height: 400px;
+        }
+
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

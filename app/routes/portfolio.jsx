@@ -4,7 +4,6 @@ import { DUMMY_WEBSITES } from '~/components/websites-data'
 import WebsiteWrapper, {
   links as WebsiteWrapperStyles,
 } from '~/components/WebsiteWrapper'
-import { links as ModalStyles } from '~/components/WebsiteModal'
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -177,7 +176,6 @@ export default function PortfolioPage() {
 export function links() {
   return [
     ...WebsiteWrapperStyles(),
-    ...ModalStyles(),
     { rel: 'stylesheet', href: styles },
   ]
 }
