@@ -37,7 +37,7 @@ export const DUMMY_WEBSITES = [
     title: 'Hinter',
     technologies: 'HTML, SCSS, JavaScript, PHP',
     description:
-      "Website for business that offers a management tool for diagnosing, forecasting and developing an organization's potential. I was made this website while working ",
+      "Website for business that offers a management tool for diagnosing, forecasting and developing an organization's potential. I was made this website while working at my previous job.",
     image: hinterPhoto,
     alt: 'screenshot of hinter page',
     url: 'https://www.hinter.ai',

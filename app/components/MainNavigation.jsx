@@ -1,31 +1,41 @@
 import { NavLink } from '@remix-run/react'
 import { motion } from 'framer-motion'
-const variants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.05 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-}
 
-const itemVariants = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 500, velocity: -100 },
-    },
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 500 },
-    },
-  },
-}
+
 export default function MainNavigation(props) {
+  const variants = {
+    open: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.05 },
+    },
+    closed: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  }
+
+  const itemVariants = props.isBrowser && window.innerWidth <= 576 ? {
+    open: {
+      opacity: 1,
+    },
+    closed: {
+      opacity: 0,
+    },
+  } : {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 500, velocity: -100 },
+      },
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 500 },
+      },
+    },
+  }
+
   const closeNav = () => {
     if (props.isBrowser && window.innerWidth <= 1280) {
       props.toggleOpen()
