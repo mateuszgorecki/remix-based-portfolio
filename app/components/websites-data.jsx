@@ -5,6 +5,15 @@ import hinterPhoto from '../../public/ScreenShot-hinter.webp'
 export const DUMMY_WEBSITES = [
   {
     id: '1-website',
+    title: 'Corelab',
+    technologies: 'HTML, SCSS, JavaScript, PHP',
+    description: 'New version of website for electronics service. Previous has been build using Divi theme and ',
+    image: corelabPhoto,
+    alt: 'screenshot of corelab page',
+    url: 'https://www.core-lab.pl',
+  },
+  {
+    id: '2-website',
     title: 'Hinter',
     technologies: 'HTML, SCSS, JavaScript, PHP',
     description:
@@ -12,15 +21,6 @@ export const DUMMY_WEBSITES = [
     image: hinterPhoto,
     alt: 'screenshot of hinter page',
     url: 'https://www.hinter.ai',
-  },
-  {
-    id: '2-website',
-    title: 'Corelab',
-    technologies: 'HTML, SCSS, JavaScript, PHP',
-    description: 'New version of website for electronics service. Previous has been build using Divi theme and ',
-    image: corelabPhoto,
-    alt: 'screenshot of corelab page',
-    url: 'https://www.core-lab.pl',
   },
   {
     id: '3-website',
@@ -34,6 +34,15 @@ export const DUMMY_WEBSITES = [
   },
   {
     id: '4-website',
+    title: 'Corelab',
+    technologies: 'HTML, SCSS, JavaScript, PHP',
+    description: 'New version of website for electronics service. Previous has been build using Divi theme and ',
+    image: corelabPhoto,
+    alt: 'screenshot of corelab page',
+    url: 'https://www.core-lab.pl',
+  },
+  {
+    id: '5-website',
     title: 'Hinter',
     technologies: 'HTML, SCSS, JavaScript, PHP',
     description:
@@ -41,15 +50,6 @@ export const DUMMY_WEBSITES = [
     image: hinterPhoto,
     alt: 'screenshot of hinter page',
     url: 'https://www.hinter.ai',
-  },
-  {
-    id: '5-website',
-    title: 'Corelab',
-    technologies: 'HTML, SCSS, JavaScript, PHP',
-    description: 'New version of website for electronics service. Previous has been build using Divi theme and ',
-    image: corelabPhoto,
-    alt: 'screenshot of corelab page',
-    url: 'https://www.core-lab.pl',
   },
   {
     id: '6-website',
