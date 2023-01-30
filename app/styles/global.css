@@ -130,9 +130,8 @@ p {
   right: 0;
   bottom: 0;
   width: 400px;
-  backdrop-filter: blur(20px);
   display: none;
-  background-color: rgba(9, 8, 13, 0.7);
+  background-color: #09080d;
 }
 
 @media screen and (min-width: 1921px) {

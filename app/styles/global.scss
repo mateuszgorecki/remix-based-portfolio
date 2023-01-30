@@ -100,9 +100,8 @@ p {
   right: 0;
   bottom: 0;
   width: 400px;
-  backdrop-filter: blur(20px);
   display: none;
-  background-color: rgba($bg-black, 0.7);
+  background-color: $bg-black;
 }
 
 @media screen and (min-width: 1921px) {
