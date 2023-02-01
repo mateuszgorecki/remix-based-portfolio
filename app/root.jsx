@@ -15,7 +15,7 @@ import { links as pageWrapperStyles } from './components/PageWrapper'
 import styles from '~/styles/global.css'
 import navStyles from '~/styles/MainNavigation.css'
 
-import bgPhoto from '../public/big-portrait.webp'
+import bgPhoto from '../public/bg.webp'
 import bgShape from '../public/bg-shape-full.svg'
 import { useEffect, useState } from 'react'
 import { MenuToggle } from './components/MenuToggle'
@@ -83,32 +83,32 @@ export default function App() {
     } else toggleOpen(true)
   }, [])
 
-  const bgImg =
-    isBrowser && window.innerWidth >= 576 ? (
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{
-          repeat: Infinity,
-          duration: 120,
-          ease: 'linear',
-        }}
-      >
-        <img
-          className='bg-shape'
-          src={bgShape}
-          alt=''
-        />
-      </motion.div>
-    ) : (
-      <div>
-        {' '}
-        <img
-          className='bg-shape'
-          src={bgShape}
-          alt=''
-        />
-      </div>
-    )
+  // const bgImg =
+  //   isBrowser && window.innerWidth <= 576 ? (
+  //     <motion.div
+  //       animate={{ rotate: 360 }}
+  //       transition={{
+  //         repeat: Infinity,
+  //         duration: 120,
+  //         ease: 'linear',
+  //       }}
+  //     >
+  //       <img
+  //         className='bg-shape'
+  //         src={bgShape}
+  //         alt=''
+  //       />
+  //     </motion.div>
+  //   ) : (
+  //     <div>
+  //       {' '}
+  //       <img
+  //         className='bg-shape'
+  //         src={bgShape}
+  //         alt=''
+  //       />
+  //     </div>
+  //   )
 
   return (
     <html lang='en'>
@@ -165,7 +165,20 @@ export default function App() {
           </a>
         </footer>
         <div className='bg-shape-wrapper'>
-          {bgImg}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{
+              repeat: Infinity,
+              duration: 120,
+              ease: 'linear',
+            }}
+          >
+            <img
+              className='bg-shape'
+              src={bgShape}
+              alt=''
+            />
+          </motion.div>
         </div>
         <img
           data-ishome={isHome}

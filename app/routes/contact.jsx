@@ -1,9 +1,8 @@
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/ContactPage.css'
-import photo from '../../public/small-portrait.webp'
+import photo from '../../public/portrait.webp'
 import { Form } from '@remix-run/react'
 import { motion } from 'framer-motion'
-import { redirect } from '@remix-run/server-runtime'
 
 export async function loader() {
   return null

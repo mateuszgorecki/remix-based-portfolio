@@ -50,7 +50,7 @@ export default function Index() {
       <div className='right'>
         <h1>Hello!</h1>
 
-        <p>Welcome to my website.</p>
+        <p>My name is Matthew and I'm fronted developer.</p>
         <p>
           This page is based
           on React.js framework - Remix. I chose it instead of plain React

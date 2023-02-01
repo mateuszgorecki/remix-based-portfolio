@@ -6,7 +6,7 @@ import WebsiteWrapper, {
 } from '~/components/WebsiteWrapper'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 
 export default function PortfolioPage() {
   const initialState = {
@@ -74,108 +74,109 @@ export default function PortfolioPage() {
   return (
     <PageWrapper className='wrapper'>
       <div className='left'>
-        <ul className='website-carousel-wrapper'>
-          <AnimatePresence
-            mode='wait'
-            initial={false}
-          >
-            {websitesList}
-          </AnimatePresence>
-        </ul>
+        <Suspense fallback={<p>Loading slider...</p>}>
+          <ul className='website-carousel-wrapper'>
+            <AnimatePresence
+              mode='wait'
+              initial={false}
+            >
+              {websitesList}
+            </AnimatePresence>
+          </ul>
+        </Suspense>
       </div>
       <div className='right'>
         <h1>Portfolio</h1>
-        <div className='website-info-wrapper'>
-          <div className='website-info-photo'>
-            <img
-              className='info-photo'
-              src={websiteInfo.image}
-              alt={websiteInfo.alt}
-            />
+        <Suspense fallback={<p>Loading data...</p>}>
+          <div className='website-info-wrapper'>
+            <div className='website-info-photo'>
+              <img
+                className='info-photo'
+                src={websiteInfo.image}
+                alt={websiteInfo.alt}
+              />
+            </div>
+            <div className='website-info-data'>
+              <div className='website-info-description'>
+                <p>Description:</p>
+                <AnimatePresence mode='wait'>
+                  <motion.p
+                    className='website-info-description'
+                    key={Math.random()}
+                    start={{
+                      opacity: 0.5,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    exit={{
+                      opacity: 0.5,
+                    }}
+                    transition={{
+                      ease: 'easeInOut',
+                      duration: 0.3,
+                    }}
+                  >
+                    {websiteInfo.description}
+                  </motion.p>
+                </AnimatePresence>
+              </div>
+              <div className='website-info-technologies'>
+                <p>Technologies:</p>
+                <AnimatePresence mode='wait'>
+                  <motion.p
+                    key={Math.random()}
+                    start={{
+                      opacity: 0.5,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    exit={{
+                      opacity: 0.5,
+                    }}
+                    transition={{
+                      ease: 'easeInOut',
+                      duration: 0.3,
+                    }}
+                  >
+                    {websiteInfo.technologies}
+                  </motion.p>
+                </AnimatePresence>
+              </div>
+              <div className='website-info-url'>
+                <p>Url:</p>
+                <AnimatePresence mode='wait'>
+                  <motion.a
+                    key={Math.random()}
+                    start={{
+                      opacity: 0.5,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    exit={{
+                      opacity: 0.5,
+                    }}
+                    transition={{
+                      ease: 'easeInOut',
+                      duration: 0.3,
+                    }}
+                    href={websiteInfo.url}
+                    target='_blank'
+                  >
+                    {websiteInfo.title}
+                  </motion.a>
+                </AnimatePresence>
+              </div>
+            </div>
           </div>
-          <div className='website-info-data'>
-            <div className='website-info-description'>
-              <p>Description:</p>
-              <AnimatePresence mode='wait'>
-                <motion.p
-                  className='website-info-description'
-                  key={Math.random()}
-                  start={{
-                    opacity: 0.5,
-                  }}
-                  animate={{
-                    opacity: 1,
-                  }}
-                  exit={{
-                    opacity: 0.5,
-                  }}
-                  transition={{
-                    ease: 'easeInOut',
-                    duration: 0.3,
-                  }}
-                >
-                  {websiteInfo.description}
-                </motion.p>
-              </AnimatePresence>
-            </div>
-            <div className='website-info-technologies'>
-              <p>Technologies:</p>
-              <AnimatePresence mode='wait'>
-                <motion.p
-                  key={Math.random()}
-                  start={{
-                    opacity: 0.5,
-                  }}
-                  animate={{
-                    opacity: 1,
-                  }}
-                  exit={{
-                    opacity: 0.5,
-                  }}
-                  transition={{
-                    ease: 'easeInOut',
-                    duration: 0.3,
-                  }}
-                >
-                  {websiteInfo.technologies}
-                </motion.p>
-              </AnimatePresence>
-            </div>
-            <div className='website-info-url'>
-              <p>Url:</p>
-              <AnimatePresence mode='wait'>
-                <motion.a
-                  key={Math.random()}
-                  start={{
-                    opacity: 0.5,
-                  }}
-                  animate={{
-                    opacity: 1,
-                  }}
-                  exit={{
-                    opacity: 0.5,
-                  }}
-                  transition={{
-                    ease: 'easeInOut',
-                    duration: 0.3,
-                  }}
-                  href={websiteInfo.url}
-                  target='_blank'
-                >
-                  {websiteInfo.title}
-                </motion.a>
-              </AnimatePresence>
-            </div>
-          </div>
-        </div>
+        </Suspense>
       </div>
     </PageWrapper>
   )
 }
 
 export function links() {
-  return [
-    ...WebsiteWrapperStyles(),
-    { rel: 'stylesheet', href: styles },
-  ]
+  return [...WebsiteWrapperStyles(), { rel: 'stylesheet', href: styles }]
 }

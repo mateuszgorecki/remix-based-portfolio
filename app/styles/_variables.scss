@@ -3,7 +3,9 @@ $almost-white: #d9d9d9;
 $white: rgba($pure-white, 0.6);
 $bg-black: #09080d;
 $black: #000;
-$highlight: #aa00ff;
+// $highlight: #aa00ff;
+$highlight: #42A5F5;
+
 
 :root {
   --card-height: 250px;
@@ -11,6 +13,8 @@ $highlight: #aa00ff;
   --card-margin: calc(var(--card-width) / 2);
   --website-height: 500px;
   --website-width: calc(var(--website-height) / 1.5);
+  --photo-width: 360px;
+  --photo-height: calc(var(--photo-width) * 1.5);
 
   @media screen and (min-width: 1921px) {
     --modal-width: 2000px;
@@ -24,9 +28,11 @@ $highlight: #aa00ff;
 
   @media screen and (max-width: 1600px) {
     --card-height: 180px;
+    --photo-width: 300px;
   }
 
   @media screen and (max-width: 1440px) {
+    --photo-width: 250px
   }
 
   @media screen and (max-width: 1280px) {
@@ -36,6 +42,7 @@ $highlight: #aa00ff;
   @media screen and (max-width: 1120px) {
     --website-height: 300px;
     --card-height: 150px;
+    --photo-width: 210px
   }
 
   @media screen and (max-width: 992px) {
@@ -45,6 +52,7 @@ $highlight: #aa00ff;
   }
 
   @media screen and (max-width: 576px) {
+    --card-height: 120px;
   }
 }
 
