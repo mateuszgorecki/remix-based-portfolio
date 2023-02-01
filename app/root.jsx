@@ -70,16 +70,45 @@ export default function App() {
   const location = useLocation()
 
   useEffect(() => {
-    if (isBrowser && window.innerWidth <= 992 && location.pathname === '/')
-      setIsHome(false)
-    else if (isBrowser && window.innerWidth >= 992 && location.pathname === '/')
+    if (isBrowser && window.innerWidth >= 992 && location.pathname === '/')
       setIsHome(true)
     else setIsHome(false)
   }, [location])
 
-  const [isOpen, toggleOpen] = useState(
-    isBrowser && window.innerWidth <= 1280 ? false : true
-  )
+  const [isOpen, toggleOpen] = useState(false)
+
+  useEffect(() => {
+    if (isBrowser && window.innerWidth <= 1280) {
+      toggleOpen(false)
+    } else toggleOpen(true)
+  }, [])
+
+  const bgImg =
+    isBrowser && window.innerWidth >= 576 ? (
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{
+          repeat: Infinity,
+          duration: 120,
+          ease: 'linear',
+        }}
+      >
+        <img
+          className='bg-shape'
+          src={bgShape}
+          alt=''
+        />
+      </motion.div>
+    ) : (
+      <div>
+        {' '}
+        <img
+          className='bg-shape'
+          src={bgShape}
+          alt=''
+        />
+      </div>
+    )
 
   return (
     <html lang='en'>
@@ -136,20 +165,7 @@ export default function App() {
           </a>
         </footer>
         <div className='bg-shape-wrapper'>
-          <motion.div
-          // animate={{ rotate: 360 }}
-          // transition={{
-          //   repeat: Infinity,
-          //   duration: 120,
-          //   ease: 'linear',
-          // }}
-          >
-            <img
-              className='bg-shape'
-              src={bgShape}
-              alt=''
-            />
-          </motion.div>
+          {bgImg}
         </div>
         <img
           data-ishome={isHome}
