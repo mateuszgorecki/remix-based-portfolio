@@ -1,6 +1,6 @@
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/PortfolioPage.css'
-import { DUMMY_WEBSITES } from '~/components/websites-data'
+import { WEBSITES_DATA } from '~/components/websites-data'
 import WebsiteWrapper, {
   links as WebsiteWrapperStyles,
 } from '~/components/WebsiteWrapper'
@@ -37,8 +37,8 @@ export default function PortfolioPage() {
   const [websitesList, setWebsitesList] = useState(() => {
     let list,
       counter = 0
-    if (DUMMY_WEBSITES.length > 0) {
-      list = DUMMY_WEBSITES.map((website) => {
+    if (WEBSITES_DATA.length > 0) {
+      list = WEBSITES_DATA.map((website) => {
         counter += 1
         return (
           <WebsiteWrapper

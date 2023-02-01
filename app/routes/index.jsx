@@ -1,7 +1,7 @@
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/HomePage.css'
 import { links as socialCardStyles } from '~/components/SocialCard.jsx'
-import { DUMMY_DATA } from '~/components/socials-data'
+import { SOCIALS_DATA } from '~/components/socials-data'
 import SocialCard from '~/components/SocialCard'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -25,7 +25,7 @@ export default function Index() {
     damping: 25,
   }
 
-  const cards = DUMMY_DATA.map((card) => (
+  const cards = SOCIALS_DATA.map((card) => (
     <motion.div
       key={card.id}
       layout
