@@ -5,6 +5,7 @@ import { SOCIALS_DATA } from '~/components/socials-data'
 import SocialCard from '~/components/SocialCard'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { NavLink } from '@remix-run/react'
 
 export default function Index() {
   const [isOn, setIsOn] = useState(false)
@@ -52,12 +53,7 @@ export default function Index() {
 
         <p>My name is Matthew and I'm fronted developer.</p>
         <p>
-          This page is based
-          on React.js framework - Remix. I chose it instead of plain React
-          because it offers server-side rendering by default and hence -
-          better SEO. Also I used there SCSS for styling and Framer Motion
-          library for animations. Website is hosted on Netlify and you can check
-          the source code on my GitHub. Link to GitHub and other socials below. Currently website is under construction.
+          I'm coding websites from scratch based on Wordpress, but also I'm gaining skills in React because I'm a big fan of component like approach. Because of my experience in regular job and freelancing (check  <NavLink className='link' to='/about'>about</NavLink> page or linkedin below) I was worked with real life projects (check <NavLink className='link' to='/portfolio'>portfolio</NavLink>).
         </p>
         <div
           className='socials-card-wrapper'

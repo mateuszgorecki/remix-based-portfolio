@@ -36,6 +36,7 @@
 
     & > p {
       @include small-text;
+      letter-spacing: 1px;
     }
   }
 }

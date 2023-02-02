@@ -17,7 +17,7 @@ export const WEBSITES_DATA = [
     title: 'Hinter',
     technologies: 'HTML, SCSS, JavaScript, PHP',
     description:
-      "Website for business that offers a management tool for diagnosing, forecasting and developing an organization's potential. I was made this website while working at my previous job.",
+      "Website for business that offers a management tool for diagnosing, forecasting and developing an organization's potential. I was made this website while working at my regular job.",
     image: hinterPhoto,
     alt: 'screenshot of hinter page',
     url: 'https://www.hinter.ai',
@@ -46,7 +46,7 @@ export const WEBSITES_DATA = [
     title: 'Hinter',
     technologies: 'HTML, SCSS, JavaScript, PHP',
     description:
-      "Website for business that offers a management tool for diagnosing, forecasting and developing an organization's potential. I was made this website while working at my previous job.",
+      "Website for business that offers a management tool for diagnosing, forecasting and developing an organization's potential. I was made this website while working at my regular job.",
     image: hinterPhoto,
     alt: 'screenshot of hinter page',
     url: 'https://www.hinter.ai',

@@ -77,21 +77,10 @@ main {
   justify-content: center;
 }
 
-footer {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  align-items: center;
+.link {
+  transition: all 0.15s ease-in-out;
 }
-footer a {
-  transition: all 0.2s ease-out;
-  text-decoration: none;
-  font-weight: bold;
-}
-footer a:hover {
+.link:hover {
   color: #42A5F5;
 }
 
@@ -144,6 +133,24 @@ p {
   width: 400px;
   display: none;
   background-color: #09080d;
+}
+
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+}
+footer a {
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer a:hover {
+  color: #42A5F5;
 }
 
 @media screen and (min-width: 1921px) {

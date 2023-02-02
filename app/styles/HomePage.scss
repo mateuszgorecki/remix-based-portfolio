@@ -2,6 +2,10 @@
 
 .wrapper {
   .right {
+    p:first-of-type {
+      margin: 30px 0 0;
+    }
+
     .socials-card-wrapper {
       width: fit-content;
       display: flex;
