@@ -4,9 +4,10 @@ import photo from '../../public/portrait.webp'
 import { Form } from '@remix-run/react'
 import { motion } from 'framer-motion'
 
-export async function loader() {
-  return null
-}
+// export async function loader() {
+//   console.log('something')
+//   return null
+// }
 export async function action({ request }) {
   const formData = await request.formData()
   const name = formData.get('name')
@@ -44,11 +45,11 @@ export default function ContactPage() {
       <div className='right'>
         <h1>Contact</h1>
         <p>
-          Contact me via:{' '}
+          Contact me via&#58;{' '}
           <a href='mailto:mateusz.gorecki.dev@gmail.com'>
-            mateusz.gorecki.dev@gmail.com
+            mateusz&#x0002E;gorecki&#x0002E;dev@gmail&#x0002E;com
           </a>
-          , or by contact form below.
+          &#x0002C; or by contact form below&#x0002E;
         </p>
         <div className='contact-info-wrapper'>
           <Form

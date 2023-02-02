@@ -83,33 +83,6 @@ export default function App() {
     } else toggleOpen(true)
   }, [])
 
-  // const bgImg =
-  //   isBrowser && window.innerWidth <= 576 ? (
-  //     <motion.div
-  //       animate={{ rotate: 360 }}
-  //       transition={{
-  //         repeat: Infinity,
-  //         duration: 120,
-  //         ease: 'linear',
-  //       }}
-  //     >
-  //       <img
-  //         className='bg-shape'
-  //         src={bgShape}
-  //         alt=''
-  //       />
-  //     </motion.div>
-  //   ) : (
-  //     <div>
-  //       {' '}
-  //       <img
-  //         className='bg-shape'
-  //         src={bgShape}
-  //         alt=''
-  //       />
-  //     </div>
-  //   )
-
   return (
     <html lang='en'>
       <head>

@@ -51,9 +51,26 @@ export default function Index() {
       <div className='right'>
         <h1>Hello!</h1>
 
-        <p>My name is Matthew and I'm fronted developer.</p>
+        <p>My name is Matthew and I&apos;m fronted developer&#x0002E;</p>
         <p>
-          I'm coding websites from scratch based on Wordpress, but also I'm gaining skills in React because I'm a big fan of component like approach. Because of my experience in regular job and freelancing (check  <NavLink className='link' to='/about'>about</NavLink> page or linkedin below) I was worked with real life projects (check <NavLink className='link' to='/portfolio'>portfolio</NavLink>).
+          I&apos;m coding websites from scratch based on Wordpress&#x0002C; but also I&apos;m
+          gaining skills in React because I&apos;m a big fan of component like
+          approach&#x0002E; I was worked with real life projects &#x00028;&rarr;{' '}
+          <NavLink
+            className='link'
+            to='/portfolio'
+          >
+            portfolio
+          </NavLink>
+          &#x00029; because I have experience in regular job and freelancing
+          &#x00028;check{' '}
+          <NavLink
+            className='link'
+            to='/about'
+          >
+            about
+          </NavLink>{' '}
+          page or linkedin below&#x00029;&#x0002E;
         </p>
         <div
           className='socials-card-wrapper'

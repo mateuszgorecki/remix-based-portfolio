@@ -4,7 +4,7 @@ import styles from '~/styles/Page404.css'
 export default function Page404() {
   return (
     <PageWrapper className='wrapper'>
-      <p>404</p>
+      <p>Page not found 😕</p>
     </PageWrapper>
   )
 }
