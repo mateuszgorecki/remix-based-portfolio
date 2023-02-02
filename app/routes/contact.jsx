@@ -4,10 +4,10 @@ import photo from '../../public/portrait.webp'
 import { Form } from '@remix-run/react'
 import { motion } from 'framer-motion'
 
-// export async function loader() {
-//   console.log('something')
-//   return null
-// }
+export async function loader() {
+  return null
+}
+
 export async function action({ request }) {
   const formData = await request.formData()
   const name = formData.get('name')

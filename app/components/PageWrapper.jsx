@@ -5,15 +5,15 @@ import styles from '~/styles/PageWrapper.css'
 
 const PageWrapper = (props) => {
   return (
-    <div
-      // mode='wait'
-      // key={useLocation().key}
-      // initial={{
-      //   scale: 0.5,
-      // }}
-      // animate={{
-      //   scale: 1,
-      // }}
+    <motion.div
+      mode='wait'
+      key={useLocation().key}
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
       // transition={{
       //   type: 'spring',
       //   stiffness: 400,
@@ -23,7 +23,7 @@ const PageWrapper = (props) => {
       onClick={props.onClick}
     >
       {props.children}
-    </div>
+    </motion.div>
   )
 }
 
