@@ -1,4 +1,3 @@
-import { NavLink } from '@remix-run/react'
 import PageWrapper from '~/components/PageWrapper'
 import styles from '~/styles/AboutPage.css'
 import photo from '../../public/portrait.webp'

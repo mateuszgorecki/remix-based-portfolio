@@ -1,6 +1,7 @@
 import madbitPhoto from '../../public/ScreenShot-madbit.webp'
 import corelabPhoto from '../../public/ScreenShot-corelab.webp'
 import hinterPhoto from '../../public/ScreenShot-hinter.webp'
+import portfolioPhoto from '../../public/ScreenShot-reactapp.webp'
 
 export const WEBSITES_DATA = [
   {
@@ -34,31 +35,12 @@ export const WEBSITES_DATA = [
   },
   {
     id: '4-website',
-    title: 'Corelab',
-    technologies: 'HTML, SCSS, JavaScript, PHP',
-    description: 'New version of website for electronics service. Previous has been built on Divi and was slow and not looking good. ',
-    image: corelabPhoto,
-    alt: 'screenshot of corelab page',
-    url: 'https://www.core-lab.pl',
-  },
-  {
-    id: '5-website',
-    title: 'Hinter',
-    technologies: 'HTML, SCSS, JavaScript, PHP',
+    title: 'React portfolio',
+    technologies: 'React, JavaScript, SCSS, Framer-Motion',
     description:
-      "Website for business that offers a management tool for diagnosing, forecasting and developing an organization's potential. I was made this website while working at my regular job.",
-    image: hinterPhoto,
-    alt: 'screenshot of hinter page',
-    url: 'https://www.hinter.ai',
-  },
-  {
-    id: '6-website',
-    title: 'Madbit',
-    technologies: 'HTML, SCSS, JavaScript, PHP',
-    description:
-      'Website for business that offers servicing companies in the field of cash registers, software and computer hardware.',
-    image: madbitPhoto,
-    alt: 'screenshot of madbit page',
-    url: 'https://www.komfis.pl',
+      'Example of portfolio website with light & dark theme. Design by me, based on neumorphism.',
+    image: portfolioPhoto,
+    alt: 'screenshot of react portfolio page',
+    url: 'https://react-portfolio-example.netlify.app/',
   },
 ]
